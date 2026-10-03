@@ -116,6 +116,13 @@ if (Test-Path $srcLessonsDb) {
     Copy-Item -Path $srcLessonsDb -Destination "$godkillerDir\lessons.db" -Force
     Write-Host "  -> Epistemic lessons database synced to $godkillerDir\lessons.db" -ForegroundColor Green
 }
+$srcUiArt = Join-Path $repoRoot "lessons\ui_artifacts"
+if (Test-Path $srcUiArt) {
+    $dstUiArt = Join-Path $godkillerDir "arena\results\ui_artifacts"
+    New-Item -ItemType Directory -Path $dstUiArt -Force | Out-Null
+    Copy-Item -Path "$srcUiArt\*" -Destination $dstUiArt -Force
+    Write-Host "  -> Synced 21 QA journey verification manifests to $dstUiArt" -ForegroundColor Green
+}
 
 # 7. Install Antigravity System Internals (MCP Schemas, Builtin Skills, Bin, Prompting)
 Write-Host "`n[8/8] Installing Antigravity System Internals (MCP Tool Schemas, Builtins, Tools)..." -ForegroundColor Yellow
@@ -131,12 +138,13 @@ Write-Host "`n==========================================================" -Foreg
 Write-Host "  INSTALLATION COMPLETE! ANTIGRAVITY IS NOW S-TIER READY   " -ForegroundColor Green
 Write-Host "==========================================================" -ForegroundColor Green
 Write-Host "What's now active:" -ForegroundColor Cyan
-Write-Host "  [+] 98+ Production Skills (Frontend 5-Source, Stitch, OWASP, FastMCP, etc.)"
+Write-Host "  [+] 153+ Production Skills (Frontend 5-Source, Stitch, OWASP, SecuritySkills, Semgrep, etc.)"
 Write-Host "  [+] 4 Native Antigravity Built-in Skills (agy-customizations, generative_ui, etc.)"
 Write-Host "  [+] 33 MCP Tool Schema Suites (Godkiller, Canva, Notion, Playwright, Semgrep, etc.)"
 Write-Host "  [+] 4-Layer Git Push Safety Policy (git-push-policy.md)"
 Write-Host "  [+] User Persona (Senior Dev Voice, Cognitive Thinking Reference & Archive)"
 Write-Host "  [+] API Incident Lessons (lessons.db, sprint-1-auth-api-fix, BOLA/BFLA guards)"
+Write-Host "  [+] 21 UI Journey Verification Manifests (godkiller_data/arena/results/ui_artifacts)"
 Write-Host "  [+] Enterprise Guardrails (Mermaid Parity, AI-Slop Audits, Boundary Checks)"
 Write-Host "  [+] Global Persona & Anti-AI Template Rules (GEMINI.md / AGENTS.md)"
 Write-Host "  [+] Complete MCP Server Mesh (Godkiller, Notion, Canva, Semgrep, Playwright, etc.)"

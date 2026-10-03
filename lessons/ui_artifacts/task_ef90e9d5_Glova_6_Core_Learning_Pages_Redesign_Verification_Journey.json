@@ -1,0 +1,45 @@
+{
+  "name": "Glova 6 Core Learning Pages Redesign Verification Journey",
+  "passed": true,
+  "notes": "Verified Vocabulary (active study flashcards with audio & flip), Grammar (topic carousel + 5/7 split rules and questions), Reading (split canvas passage + questions), Listening (audio station with speed controls and collapsed transcript), Writing (word counter bounds and honest pending state), and Speaking (recording timer with speech recognizer).",
+  "steps": [
+    {
+      "action": "render",
+      "target": "/vocabulary",
+      "expect": "Vocabulary active study flashcard hero with CEFR badge, pronunciation button, flip/reveal Thai meaning, and real mastery count",
+      "screenshot_uri": null
+    },
+    {
+      "action": "render",
+      "target": "/grammar",
+      "expect": "Grammar topic selector carousel and 5/7 split canvas with rule formulas and interactive QuestionCard practice",
+      "screenshot_uri": null
+    },
+    {
+      "action": "render",
+      "target": "/reading",
+      "expect": "Reading split canvas with word count, reading time, collapsible vocabulary glossary, and questions",
+      "screenshot_uri": null
+    },
+    {
+      "action": "render",
+      "target": "/listening",
+      "expect": "Listening central audio station with speed controls, accent badge, comprehension QuestionCard, and collapsed transcript",
+      "screenshot_uri": null
+    },
+    {
+      "action": "render",
+      "target": "/writing",
+      "expect": "Writing task prompt card, live word counter indicator, honest evaluation pending notice, and model answer comparison",
+      "screenshot_uri": null
+    },
+    {
+      "action": "render",
+      "target": "/speaking",
+      "expect": "Speaking topic prompt, model audio player, interactive recording station with live timer, and Web Speech recognizer",
+      "screenshot_uri": null
+    }
+  ],
+  "screenshot_uris": [],
+  "recorded_at": "2026-09-28T14:13:08.446719+00:00"
+}

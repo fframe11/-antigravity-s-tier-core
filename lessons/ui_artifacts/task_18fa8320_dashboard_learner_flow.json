@@ -1,0 +1,21 @@
+{
+  "name": "dashboard_learner_flow",
+  "passed": true,
+  "notes": "",
+  "steps": [
+    {
+      "action": "navigate_dashboard",
+      "target": "",
+      "expect": "",
+      "screenshot_uri": null
+    },
+    {
+      "action": "inspect_hero_remediation",
+      "target": "",
+      "expect": "",
+      "screenshot_uri": null
+    }
+  ],
+  "screenshot_uris": [],
+  "recorded_at": "2026-09-28T13:12:53.962591+00:00"
+}

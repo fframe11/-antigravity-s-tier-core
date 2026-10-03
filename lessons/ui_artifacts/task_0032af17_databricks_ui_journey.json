@@ -1,0 +1,27 @@
+{
+  "name": "databricks_ui_journey",
+  "passed": true,
+  "notes": "",
+  "steps": [
+    {
+      "action": "",
+      "target": "",
+      "expect": "",
+      "screenshot_uri": null
+    },
+    {
+      "action": "",
+      "target": "",
+      "expect": "",
+      "screenshot_uri": null
+    },
+    {
+      "action": "",
+      "target": "",
+      "expect": "",
+      "screenshot_uri": null
+    }
+  ],
+  "screenshot_uris": [],
+  "recorded_at": "2026-09-23T11:00:26.350501+00:00"
+}

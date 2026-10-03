@@ -1,0 +1,39 @@
+{
+  "name": "Tier 1 Batch 001 Pilot Workflow",
+  "passed": true,
+  "notes": "",
+  "steps": [
+    {
+      "action": "inspect_batch",
+      "target": "TIER-1-001.json",
+      "expect": "200 unreviewed records",
+      "screenshot_uri": null
+    },
+    {
+      "action": "validate_reviewer",
+      "target": "lexicographer_anna",
+      "expect": "valid human reviewer",
+      "screenshot_uri": null
+    },
+    {
+      "action": "adjudicate_units",
+      "target": "10 pilot records",
+      "expect": "7 approved, 2 hold, 1 edit_required",
+      "screenshot_uri": null
+    },
+    {
+      "action": "audit_ledger",
+      "target": "vocabulary-human-review-ledger.json",
+      "expect": "10 production events recorded with test isolation",
+      "screenshot_uri": null
+    },
+    {
+      "action": "verify_readiness",
+      "target": "vocabulary-human-qa-readiness.json",
+      "expect": "28 learner-ready, 9972 gap, NOT_READY",
+      "screenshot_uri": null
+    }
+  ],
+  "screenshot_uris": [],
+  "recorded_at": "2026-09-26T08:09:42.991643+00:00"
+}

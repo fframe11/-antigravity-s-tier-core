@@ -71,6 +71,11 @@ if [ -f "$SCRIPT_DIR/lessons/lessons.db" ]; then
     cp "$SCRIPT_DIR/lessons/lessons.db" "$GODKILLER_DIR/lessons.db"
     echo "  -> Epistemic lessons database synced to $GODKILLER_DIR/lessons.db"
 fi
+if [ -d "$SCRIPT_DIR/lessons/ui_artifacts" ]; then
+    mkdir -p "$GODKILLER_DIR/arena/results/ui_artifacts"
+    cp -r "$SCRIPT_DIR/lessons/ui_artifacts/"* "$GODKILLER_DIR/arena/results/ui_artifacts/"
+    echo "  -> Synced 21 QA journey verification manifests"
+fi
 
 echo "[8/8] Installing Antigravity System Internals (MCP Schemas, Builtins, Tools)..."
 AG_SYSTEM_DIR="$GEMINI_DIR/antigravity"

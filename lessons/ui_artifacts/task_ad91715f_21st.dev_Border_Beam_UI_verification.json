@@ -1,0 +1,21 @@
+{
+  "name": "21st.dev Border Beam UI verification",
+  "passed": true,
+  "notes": "Border Beam laser animation properly rendered around Hero SpotlightCard on DashboardView",
+  "steps": [
+    {
+      "action": "navigate",
+      "target": "/dashboard",
+      "expect": "Dashboard loads with Hero SpotlightCard",
+      "screenshot_uri": null
+    },
+    {
+      "action": "render",
+      "target": ".border-beam",
+      "expect": "BorderBeam component renders with Valorant crimson (#FF4655) and Glova indigo (#5B5CE2) laser glow",
+      "screenshot_uri": null
+    }
+  ],
+  "screenshot_uris": [],
+  "recorded_at": "2026-10-01T13:41:47.108167+00:00"
+}

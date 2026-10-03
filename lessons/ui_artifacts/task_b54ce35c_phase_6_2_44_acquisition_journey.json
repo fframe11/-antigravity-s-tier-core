@@ -1,0 +1,15 @@
+{
+  "name": "phase_6_2_44_acquisition_journey",
+  "passed": true,
+  "notes": "",
+  "steps": [
+    {
+      "action": "run_pipeline",
+      "target": "run-phase-6244-acquisition.mjs",
+      "expect": "FULL_CORPUS_ACQUISITION_SUCCESS",
+      "screenshot_uri": null
+    }
+  ],
+  "screenshot_uris": [],
+  "recorded_at": "2026-09-28T12:01:51.026842+00:00"
+}

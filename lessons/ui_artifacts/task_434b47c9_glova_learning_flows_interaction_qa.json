@@ -1,0 +1,63 @@
+{
+  "name": "glova_learning_flows_interaction_qa",
+  "passed": true,
+  "notes": "Verified all 6 learning views (Vocabulary, Grammar, Reading, Listening, Writing, Speaking) interactively with Playwright and Vitest",
+  "steps": [
+    {
+      "action": "click",
+      "target": "Vocabulary study card",
+      "expect": "Flashcard reveal with Thai definition and example sentence",
+      "screenshot_uri": null
+    },
+    {
+      "action": "click",
+      "target": "Vocabulary mastery toggle",
+      "expect": "Mastery toggle switches to \u0e08\u0e33\u0e44\u0e14\u0e49\u0e41\u0e25\u0e49\u0e27 without dual-language slop",
+      "screenshot_uri": null
+    },
+    {
+      "action": "click",
+      "target": "Grammar topic selector",
+      "expect": "Display formula and topic-specific Cambridge questions",
+      "screenshot_uri": null
+    },
+    {
+      "action": "click",
+      "target": "Grammar question option",
+      "expect": "Immediate explanation feedback and choice lock",
+      "screenshot_uri": null
+    },
+    {
+      "action": "click",
+      "target": "Reading glossary drawer",
+      "expect": "Glossary drawer expands and toggles label",
+      "screenshot_uri": null
+    },
+    {
+      "action": "click",
+      "target": "Listening transcript toggle",
+      "expect": "Transcript expands with clean single-language heading",
+      "screenshot_uri": null
+    },
+    {
+      "action": "type",
+      "target": "Writing textarea",
+      "expect": "Live word counter updates dynamically from 0 to 34 words",
+      "screenshot_uri": null
+    },
+    {
+      "action": "click",
+      "target": "Writing submit button",
+      "expect": "Submission banner confirms receipt under Cambridge standards without status banner",
+      "screenshot_uri": null
+    },
+    {
+      "action": "click",
+      "target": "Speaking record button",
+      "expect": "Digital timer increments from 0:00 to 0:14 with pulsing recording state",
+      "screenshot_uri": null
+    }
+  ],
+  "screenshot_uris": [],
+  "recorded_at": "2026-09-28T15:39:56.399815+00:00"
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Vocabulary Pipeline & Evidence Warehouse Verification",
+  "passed": true,
+  "notes": "Verified LEXiTRON 2.0 full index, Tatoeba 2024 example warehouse, 3-tier quality filter, and safety invariants.",
+  "steps": [
+    {
+      "action": "execute",
+      "target": "scripts/content-pipeline/vocab/verify-phase-6235-thai-example.mjs",
+      "expect": "All 47 checks pass with 0 failures",
+      "screenshot_uri": null
+    },
+    {
+      "action": "execute",
+      "target": "tests/vocabulary-thai-example-evidence.test.ts",
+      "expect": "All 17 Vitest tests pass",
+      "screenshot_uri": null
+    }
+  ],
+  "screenshot_uris": [],
+  "recorded_at": "2026-09-28T03:38:53.379217+00:00"
+}

@@ -1,0 +1,27 @@
+{
+  "name": "calm_databricks_ui_journey",
+  "passed": true,
+  "notes": "",
+  "steps": [
+    {
+      "action": "Navigate to /rules",
+      "target": "",
+      "expect": "",
+      "screenshot_uri": null
+    },
+    {
+      "action": "Navigate to /pipeline",
+      "target": "",
+      "expect": "",
+      "screenshot_uri": null
+    },
+    {
+      "action": "Navigate to /export",
+      "target": "",
+      "expect": "",
+      "screenshot_uri": null
+    }
+  ],
+  "screenshot_uris": [],
+  "recorded_at": "2026-09-23T09:48:44.796341+00:00"
+}

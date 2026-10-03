@@ -1,0 +1,33 @@
+{
+  "name": "tier1_integrity_audit_journey",
+  "passed": true,
+  "notes": "",
+  "steps": [
+    {
+      "action": "audit_ledger_integrity",
+      "target": "",
+      "expect": "",
+      "screenshot_uri": null
+    },
+    {
+      "action": "verify_identity_gate",
+      "target": "",
+      "expect": "",
+      "screenshot_uri": null
+    },
+    {
+      "action": "census_qa_flags",
+      "target": "",
+      "expect": "",
+      "screenshot_uri": null
+    },
+    {
+      "action": "recompute_tier1_queue",
+      "target": "",
+      "expect": "",
+      "screenshot_uri": null
+    }
+  ],
+  "screenshot_uris": [],
+  "recorded_at": "2026-09-26T06:58:58.803780+00:00"
+}

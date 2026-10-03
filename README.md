@@ -49,11 +49,13 @@ chmod +x install.sh
 ```
 
 The installer automatically:
-1. Deploys **98+ S-Tier Skills** into `~/.gemini/config/skills/`
-2. Configures **Enterprise Project Guardrails** in `~/.gemini/templates/`
-3. Installs global cognitive rules (`GEMINI.md`, `AGENTS.md`) into `~/.gemini/`
-4. Deploys custom MCP servers (`code-analysis`, `vulnerability-scanner`, `unsplash`, `google-image-search`)
-5. Generates the active `mcp_config.json` tailored to your local user home directory
+1. Deploys **153+ S-Tier Skills** into `~/.gemini/config/skills/` (including 50+ Cybersecurity Skills, Semgrep AST Rules, OWASP Top 10)
+2. Deploys **4 Native Antigravity Built-in Skills** and **33 MCP Tool Schema Suites (317 JSON files)** into `~/.gemini/antigravity/`
+3. Configures **Enterprise Project Guardrails** and **4-Layer Git Push Policy** in `~/.gemini/templates/`
+4. Installs global cognitive rules (`GEMINI.md`, `AGENTS.md`) and User Persona into `~/.gemini/`
+5. Deploys custom MCP servers (`code-analysis`, `vulnerability-scanner`, `unsplash`, `google-image-search`)
+6. Deploys **Epistemic Lessons Database** (`lessons.db` & 21 UI journey verification manifests)
+7. Generates the active `mcp_config.json` tailored to your local user home directory
 
 ---
 
@@ -61,7 +63,7 @@ The installer automatically:
 
 ```
 antigravity-s-tier-core/
-├── skills/                     # 98+ Production-Grade Agent Skills
+├── skills/                     # 153+ Production-Grade Agent Skills
 │   ├── five-source-frontend/   # 5-Source UI sourcing invariant (21st.dev, aceternity, etc.)
 │   ├── stitch/                 # Google Lab's @google/stitch design-first integration
 │   ├── human-dashboard-design/ # Enterprise BI & Admin layouts (Next-Shadcn)
@@ -69,17 +71,24 @@ antigravity-s-tier-core/
 │   ├── security-and-hardening/ # Supply-chain, attack surface & auth hardening
 │   ├── owasp-cheatsheets/      # OWASP Top 10 secure coding guidelines
 │   ├── user-persona/           # Authentic senior engineering voice & decision engine
-│   ├── i-have-adhd/            # Direct-action communication & Bot Template Ban
-│   └── ... (90+ more)
+│   ├── code-security/          # Semgrep AST rules (30+ vulnerability scanners)
+│   ├── llm-security/           # OWASP LLM Top 10 & prompt injection defenses
+│   ├── 45+ SecuritySkills/     # Cloud, AppSec, IAM, Network, DevSecOps, Incident Response
+│   └── ... (140+ more)
 ├── rules/                      # Global Cognitive Invariants & Rules
 │   ├── GEMINI.md               # S-Tier Master Rules (Godkiller orchestration, UI invariants)
-│   └── AGENTS.md               # Execution guidelines and invariant constraints
+│   ├── AGENTS.md               # Execution guidelines and invariant constraints
+│   └── git-push-policy.md      # 4-layer Git Push safety and verification policy
 ├── docs/                       # Definitive Technical & Cognitive Manuals
 │   ├── API_MISTAKES_AND_LESSONS.md # Fatal API mistakes, real postmortems & defense patterns
 │   └── COGNITIVE_PERSONA_ARCHITECTURE.md # 3-layer cognitive thinking reference & preview
 ├── lessons/                    # Epistemic Postmortems Database
 │   ├── lessons.db              # Godkiller memory SQLite database
-│   └── lessons.json            # Human-readable export of validated architectural lessons
+│   ├── lessons.json            # Human-readable export of validated architectural lessons
+│   └── ui_artifacts/           # 21 QA journey verification manifests
+├── scripts/                    # Helper Tooling & Knowledge Base Synchronization
+│   ├── clone_repos.py          # Parallel cloner for 24 architecture & security repos
+│   └── clone_more_repos.py     # Cloner for 16 agent evaluation & cloud-native repos
 ├── templates/                  # Automated Project Guardrails (Self-Scaffolding)
 │   ├── init-guardrails.ps1     # 1-click project onboarding guardrail injector
 │   └── project-guardrails/     # Injected into every new/existing workspace
