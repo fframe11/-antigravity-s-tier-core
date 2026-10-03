@@ -5,20 +5,44 @@
 
 ---
 
-## ⚡ Quick Start (1-Click Installation)
+## 🚀 One-Prompt Auto-Installer (สำหรับสั่ง Antigravity บนเครื่องปลายทาง)
+
+หากต้องการนำการตั้งค่าทั้งหมดนี้ไปติดตั้งบนเครื่องใหม่ หรือเครื่องอื่น ให้เปิด Antigravity บนเครื่องนั้น แล้ว **คัดลอก Prompt ด้านล่างนี้ส่งให้ Antigravity จัดการทันที**:
+
+```text
+โคลน repository https://github.com/fframe11/antigravity-s-tier-core.git มาไว้ที่เครื่อง 
+จากนั้นให้รันสคริปต์ติดตั้งอัตโนมัติ:
+- หากเป็น Windows (PowerShell) ให้รัน:
+  powershell -ExecutionPolicy Bypass -File .\antigravity-s-tier-core\install.ps1 -Force
+- หากเป็น macOS / Linux (Bash) ให้รัน:
+  chmod +x ./antigravity-s-tier-core/install.sh && ./antigravity-s-tier-core/install.sh
+
+โดยให้ติดตั้งทับการตั้งค่าเดิมทั้งหมด (~/.gemini) เพื่ออัปเกรดให้ Antigravity บนเครื่องนี้กลายเป็นระบบระดับ Enterprise S-Tier โดยสมบูรณ์:
+1. ติดตั้ง 98+ S-Tier Skills (Frontend 5-Source, Stitch Design-First, Human Dashboard, OWASP, Security Hardening, etc.)
+2. ติดตั้ง 4 Native Antigravity Built-in Skills และ 33 MCP Tool Schema Suites (317 JSON files)
+3. คัดลอก User Persona (เสียงวิศวกรอาวุโสสมจริง), กฎ Universal Bot Template Ban, และ 4-Layer Git Push Policy
+4. ติดตั้งฐานข้อมูลบทเรียนข้อผิดพลาดระบบ (lessons.db / API postmortems) เข้าสู่ godkiller_data
+5. เชื่อมต่อ MCP Server Mesh ทั้งหมด (Canva, Notion, Playwright, Semgrep, UI-Registry, etc.) พร้อมปรับ Path ให้อัตโนมัติ
+
+เมื่อติดตั้งเสร็จแล้ว ให้รันตรวจสอบสถานะ Skills และ MCP เพื่อยืนยันว่าพร้อมใช้งานทันที
+```
+
+---
+
+## ⚡ Quick Start (Manual 1-Click Installation)
 
 Clone this repository and run the automated installer for your operating system:
 
 ### Windows (PowerShell)
 ```powershell
-git clone <YOUR_REPO_URL> antigravity-s-tier-core
+git clone https://github.com/fframe11/antigravity-s-tier-core.git
 cd antigravity-s-tier-core
-.\install.ps1
+.\install.ps1 -Force
 ```
 
 ### macOS / Linux (Bash)
 ```bash
-git clone <YOUR_REPO_URL> antigravity-s-tier-core
+git clone https://github.com/fframe11/antigravity-s-tier-core.git
 cd antigravity-s-tier-core
 chmod +x install.sh
 ./install.sh
