@@ -61,9 +61,11 @@ if (Test-Path $srcTemplates) {
 Write-Host "`n[4/6] Installing Global Cognitive Rules & Invariants..." -ForegroundColor Yellow
 $srcRules = Join-Path $repoRoot "rules"
 if (Test-Path $srcRules) {
-    Copy-Item -Path "$srcRules\GEMINI.md" -Destination $geminiDir -Force
+    $rawGemini = Get-Content -Path "$srcRules\GEMINI.md" -Raw -Encoding UTF8
+    $adaptedGemini = $rawGemini.Replace('C:\Users\ffram', $userHome)
+    $adaptedGemini | Set-Content -Path "$geminiDir\GEMINI.md" -Encoding UTF8
     Copy-Item -Path "$srcRules\AGENTS.md" -Destination $geminiDir -Force
-    Write-Host "  -> Copied GEMINI.md and AGENTS.md to $geminiDir" -ForegroundColor Green
+    Write-Host "  -> Copied GEMINI.md and AGENTS.md to $geminiDir (with user path auto-adapted)" -ForegroundColor Green
 }
 
 # 4. Install Plugins
