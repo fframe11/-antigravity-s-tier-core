@@ -18,7 +18,7 @@
   chmod +x ./antigravity-s-tier-core/install.sh && ./antigravity-s-tier-core/install.sh
 
 โดยให้ติดตั้งทับการตั้งค่าเดิมทั้งหมด (~/.gemini) เพื่ออัปเกรดให้ Antigravity บนเครื่องนี้กลายเป็นระบบระดับ Enterprise S-Tier โดยสมบูรณ์:
-1. ติดตั้ง 98+ S-Tier Skills (Frontend 5-Source, Stitch Design-First, Human Dashboard, OWASP, Security Hardening, etc.)
+1. ติดตั้ง 153+ S-Tier Skills (Frontend 5-Source, Stitch Design-First, Human Dashboard, OWASP, Security Hardening, etc.)
 2. ติดตั้ง 4 Native Antigravity Built-in Skills และ 33 MCP Tool Schema Suites (317 JSON files)
 3. คัดลอก User Persona (เสียงวิศวกรอาวุโสสมจริง), กฎ Universal Bot Template Ban, และ 4-Layer Git Push Policy
 4. ติดตั้งฐานข้อมูลบทเรียนข้อผิดพลาดระบบ (lessons.db / API postmortems) เข้าสู่ godkiller_data
