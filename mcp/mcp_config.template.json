@@ -7,8 +7,7 @@
         "import asyncio; from godkiller_mcp.server import app; asyncio.run(app.run_stdio_async())"
       ],
       "env": {
-        "GODKILLER_STRICT_MODE": "true",
-        "PYTHONPATH": "C:\\Users\\ffram\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages"
+        "GODKILLER_STRICT_MODE": "true"
       }
     },
     "python-debugger": {
@@ -24,10 +23,7 @@
         "-m",
         "mcp_run_python",
         "stdio"
-      ],
-      "env": {
-        "PATH": "C:\\Users\\ffram\\.deno\\bin;%PATH%"
-      }
+      ]
     },
     "api-fetcher": {
       "command": "npx",
@@ -155,38 +151,32 @@
     "code-analysis": {
       "command": "python",
       "args": [
-        "C:\\Users\\ffram\\security_repos\\code-analysis-mcp\\code_analysis.py"
-      ],
-      "env": {
-        "PYTHONPATH": "C:\\Users\\ffram\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages;C:\\Users\\ffram\\security_repos\\code-analysis-mcp"
-      }
+        "{{USER_HOME}}/.gemini/mcp-servers/code-analysis-mcp/code_analysis.py"
+      ]
     },
     "vulnerability-scanner": {
       "command": "python",
       "args": [
-        "C:\\Users\\ffram\\security_repos\\mcp-scanner\\scanner_server.py"
-      ],
-      "env": {
-        "PATH": "C:\\Users\\ffram\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\Scripts;%PATH%",
-        "PYTHONPATH": "C:\\Users\\ffram\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages;C:\\Users\\ffram\\security_repos\\mcp-scanner"
-      }
+        "{{USER_HOME}}/.gemini/mcp-servers/mcp-scanner/scanner_server.py"
+      ]
     },
     "unsplash": {
       "command": "python",
       "args": [
-        "C:\\Users\\ffram\\security_repos\\unsplash-mcp\\server.py"
+        "{{USER_HOME}}/.gemini/mcp-servers/unsplash-mcp/server.py"
       ],
       "env": {
-        "PYTHONPATH": "C:\\Users\\ffram\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages;C:\\Users\\ffram\\security_repos\\unsplash-mcp"
+        "UNSPLASH_ACCESS_KEY": ""
       }
     },
     "google-image-search": {
       "command": "python",
       "args": [
-        "C:\\Users\\ffram\\security_repos\\google-image-search-mcp\\server.py"
+        "{{USER_HOME}}/.gemini/mcp-servers/google-image-search-mcp/server.py"
       ],
       "env": {
-        "PYTHONPATH": "C:\\Users\\ffram\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages;C:\\Users\\ffram\\security_repos\\google-image-search-mcp"
+        "GOOGLE_SEARCH_API_KEY": "",
+        "GOOGLE_SEARCH_CX": ""
       }
     },
     "ui-registry": {
@@ -197,12 +187,12 @@
       ]
     },
     "canva": {
+      "command": "npx",
       "args": [
         "-y",
         "mcp-remote@latest",
         "https://mcp.canva.com/mcp"
-      ],
-      "command": "npx"
+      ]
     }
   }
 }

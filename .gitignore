@@ -28,3 +28,6 @@ Thumbs.db
 .vscode/
 .idea/
 *.swp
+
+# Security Scanner test malware samples (prevents Antivirus quarantine alerts)
+mcp/custom-servers/mcp-scanner/evals/behavioral-analysis/data/backdoor/

@@ -29,8 +29,47 @@
 3. เมื่อติดตั้งเสร็จ ให้รันตรวจสอบสถานะ:
    - สแกนดูว่า ~/.gemini/config/skills/ มีครบ 153 skills หรือไม่
    - ตรวจสอบว่าไฟล์ GEMINI.md และ mcp_config.json แมป path ถูกต้องตรงกับเครื่องนี้
-   - รายงานสรุปสถานะความพร้อมใช้งานให้ผู้ใช้ทราบ
+
+4. รายงานส่งมอบพร้อมคู่มือตั้งค่า API Keys ส่วนตัวแบบจับมือทำ (Hand-holding Guide):
+   - ตอบกลับผู้ใช้ทันทีหลังติดตั้งเสร็จ โดยแจ้งให้ชัดเจนว่าระบบไม่ได้แนบ API Key ส่วนตัวใดๆ ของผู้สร้าง (ffram) มาด้วย เพื่อความปลอดภัยสูงสุดตามหลัก DevSecOps (Zero Credential Leakage)
+   - แนะนำวิธีใส่ Key ทีละบริการแบบจับมือทำ:
+     * GitHub MCP: ต้องใช้ Personal Access Token (classic) มีสิทธิ์ repo, workflow, read:org สร้างได้ที่ https://github.com/settings/tokens
+     * Unsplash MCP (Optional): ต้องใช้ Access Key สมัครฟรีที่ https://unsplash.com/developers (หากไม่ใส่จะใช้ภาพคัดสรร CDN ในตัว)
+     * Google Image Search MCP (Optional): ต้องใช้ API Key และ CX Search Engine ID จาก https://console.cloud.google.com/ และ https://programmablesearchengine.google.com/
+     * Notion & Canva MCP: ไม่ต้องใส่ Key เอง ระบบจะเด้งหน้า OAuth ให้กด Login บนเบราว์เซอร์อัตโนมัติเมื่อเรียกใช้
+   - ชี้เป้า Path ไฟล์จริงของเครื่องนี้ที่ต้องเปิดเข้าไปใส่ Key (เช่น Windows: %USERPROFILE%\.gemini\config\mcp_config.json หรือ macOS/Linux: ~/.gemini/config/mcp_config.json) พร้อมแสดงตัวอย่างโค้ด JSON ที่ต้องวางอย่างชัดเจน
 ```
+
+---
+
+## 🔑 การตั้งค่า API Keys ส่วนตัว (Hand-Holding Setup Guide)
+
+> **Zero-Exposure Security Policy**: เพื่อความปลอดภัยสูงสุดระดับ DevSecOps ระบบนี้ **ไม่ได้บันทึกหรือแนบ API Key หรือ GitHub PAT ส่วนตัวของผู้สร้าง (`ffram`) มาด้วย**  
+> ผู้ใช้งานจะต้องนำ Key บัญชีของตนเองมาใส่ตามขั้นตอนด้านล่างนี้:
+
+### 📍 ตำแหน่งไฟล์สำหรับใส่ Key (Configuration Path):
+- **Windows**: `%USERPROFILE%\.gemini\config\mcp_config.json` (หรือ `C:\Users\<ชื่อผู้ใช้>\.gemini\config\mcp_config.json`)
+- **macOS / Linux**: `~/.gemini/config/mcp_config.json`
+
+### 🛠️ บริการที่ต้องใส่ Key และวิธีขอทีละสเต็ป:
+
+1. **GitHub MCP (`github`)** — *สำหรับฟังก์ชันสร้าง PR, Branch, ตรวจสอบ CI และค้นหาโค้ด*
+   - **วิธีขอ**: ไปที่ [GitHub Token Settings](https://github.com/settings/tokens) -> กด **"Generate new token (classic)"** -> ตั้งชื่อ เช่น `Antigravity-Token` -> ติ๊กเลือก `repo`, `workflow`, `read:org` -> กด **Generate token** แล้วคัดลอกรหัส `ghp_...`
+   - **จุดที่ใส่**: วางลงในฟิลด์ `"GITHUB_PERSONAL_ACCESS_TOKEN": "ghp_..."`
+
+2. **Unsplash MCP (`unsplash`)** — *ทางเลือก สำหรับค้นหาภาพถ่ายความละเอียดสูงระดับโปรดักชัน*
+   - **วิธีขอ**: ไปที่ [Unsplash Developers](https://unsplash.com/developers) -> สมัครบัญชีฟรี -> กด New Application -> คัดลอก **"Access Key"**
+   - **จุดที่ใส่**: วางลงในฟิลด์ `"UNSPLASH_ACCESS_KEY": "..."`  
+   *(หมายเหตุ: หากไม่ใส่ ระบบจะสลับไปใช้คลังภาพ CDN คัดสรรระดับโปรดักชันที่มีมาให้ในตัวโดยอัตโนมัติ)*
+
+3. **Google Image Search MCP (`google-image-search`)** — *ทางเลือก สำหรับค้นหาภาพไดอะแกรมและโลโก้*
+   - **วิธีขอ**: ขอ API Key ที่ [Google Cloud Console](https://console.cloud.google.com/apis/credentials) (เปิดใช้งาน Custom Search API) และสร้าง Search Engine เพื่อเอา CX ที่ [Programmable Search Engine](https://programmablesearchengine.google.com/)
+   - **จุดที่ใส่**: วางใน `"GOOGLE_SEARCH_API_KEY": "..."` และ `"GOOGLE_SEARCH_CX": "..."`
+
+4. **Notion MCP (`notion`) & Canva MCP (`canva`)** — *Zero Key (ล็อกอินผ่านเบราว์เซอร์อัตโนมัติ)*
+   - ทั้งสองบริการใช้มาตรฐาน **OAuth Browser Authentication** ไม่ต้องกรอก Key ใดๆ ในไฟล์ Config เมื่อ Agent เรียกใช้ฟังก์ชันครั้งแรก ระบบจะเปิดหน้าต่างเบราว์เซอร์ให้กด Login อนุมัติสิทธิ์ในคลิกเดียว
+
+*(อ่านคู่มือการตั้งค่าฉบับเต็มพร้อมตัวอย่าง JSON ได้ที่ [`docs/API_KEYS_SETUP_GUIDE.md`](docs/API_KEYS_SETUP_GUIDE.md))*
 
 ---
 
