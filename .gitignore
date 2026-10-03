@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment & Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.cert
+
+# Logs & Diagnostics
+*.log
+logs/
+.system_generated/
+*.tmp
+
+# Operating System
+Thumbs.db
+.DS_Store
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp

@@ -1,0 +1,5 @@
+{
+  "name": "remotion",
+  "description": "Programmatic video creation in React using Remotion. Includes 35 domain-specific rules, animation easing, audio synchronization, captions, and rendering best practices.",
+  "version": "1.0.0"
+}

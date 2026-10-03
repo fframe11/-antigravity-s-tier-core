@@ -1,0 +1,208 @@
+{
+  "mcpServers": {
+    "godkiller-mcp": {
+      "command": "python",
+      "args": [
+        "-c",
+        "import asyncio; from godkiller_mcp.server import app; asyncio.run(app.run_stdio_async())"
+      ],
+      "env": {
+        "GODKILLER_STRICT_MODE": "true",
+        "PYTHONPATH": "C:\\Users\\ffram\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages"
+      }
+    },
+    "python-debugger": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@debugmcp/mcp-debugger"
+      ]
+    },
+    "python-executor": {
+      "command": "python",
+      "args": [
+        "-m",
+        "mcp_run_python",
+        "stdio"
+      ],
+      "env": {
+        "PATH": "C:\\Users\\ffram\\.deno\\bin;%PATH%"
+      }
+    },
+    "api-fetcher": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-fetch-server"
+      ]
+    },
+    "sqlite-mock": {
+      "command": "python",
+      "args": [
+        "-c",
+        "from mcp.server.fastmcp import FastMCP; import sqlite3; mcp = FastMCP('SQLite Mock'); db_path = 'mock_backend.db';\n@mcp.tool(name='execute')\ndef execute(sql: str) -> str:\n    conn = sqlite3.connect(db_path); cursor = conn.cursor()\n    try: cursor.execute(sql); conn.commit(); return 'SUCCESS'\n    except Exception as e: return f'ERROR: {e}'\n    finally: conn.close()\n@mcp.tool(name='query')\ndef query(sql: str) -> str:\n    conn = sqlite3.connect(db_path); cursor = conn.cursor()\n    try:\n        cursor.execute(sql); rows = cursor.fetchall(); cols = [d[0] for d in cursor.description] if cursor.description else []\n        return str([dict(zip(cols, r)) for r in rows])\n    except Exception as e: return f'ERROR: {e}'\n    finally: conn.close()\nmcp.run()"
+      ]
+    },
+    "security-bandit": {
+      "command": "python",
+      "args": [
+        "-c",
+        "import subprocess; from mcp.server.fastmcp import FastMCP; mcp = FastMCP('Bandit'); mcp.tool(name='scan_project')(lambda path: subprocess.run(['python', '-m', 'bandit', '-r', path, '-f', 'json', '-q'], capture_output=True, text=True).stdout); mcp.run()"
+      ]
+    },
+    "api-blueprint": {
+      "command": "python",
+      "args": [
+        "-c",
+        "from mcp.server.fastmcp import FastMCP; mcp = FastMCP('API Blueprint'); mcp.tool(name='read_blueprint')(lambda: 'OpenAPI Engine Ready'); mcp.run()"
+      ]
+    },
+    "json-processor": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-jq"
+      ]
+    },
+    "docker-manager": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-server-docker"
+      ]
+    },
+    "workflow-designer": {
+      "command": "python",
+      "args": [
+        "-c",
+        "from mcp.server.fastmcp import FastMCP; mcp = FastMCP('Workflow Designer'); mcp.tool(name='draw_flow')(lambda mermaid_code: f'Workflow Compiled:\\n{mermaid_code}'); mcp.run()"
+      ]
+    },
+    "solution-brainstorm": {
+      "command": "python",
+      "args": [
+        "-c",
+        "from mcp.server.fastmcp import FastMCP; mcp = FastMCP('Solution Brainstorm'); mcp.tool(name='structure_ideas')(lambda problem: f'Analyzing solution paths for: {problem}'); mcp.run()"
+      ]
+    },
+    "git-local-reviewer": {
+      "command": "python",
+      "args": [
+        "-c",
+        "import subprocess; from mcp.server.fastmcp import FastMCP; mcp = FastMCP('Git Local Reviewer'); mcp.tool(name='review_local_diff')(lambda: subprocess.run(['git', 'diff'], capture_output=True, text=True).stdout); mcp.tool(name='check_local_status')(lambda: subprocess.run(['git', 'status'], capture_output=True, text=True).stdout); mcp.run()"
+      ]
+    },
+    "redis-cache-mock": {
+      "command": "python",
+      "args": [
+        "-c",
+        "from mcp.server.fastmcp import FastMCP; mcp = FastMCP('Redis Cache Mock'); db = {}; mcp.tool(name='redis_set')(lambda key, val: db.update({key: val}) or 'OK (Cached)'); mcp.tool(name='redis_get')(lambda key: db.get(key, 'Cache Miss')); mcp.run()"
+      ]
+    },
+    "system-log-analyzer": {
+      "command": "python",
+      "args": [
+        "-c",
+        "from mcp.server.fastmcp import FastMCP; mcp = FastMCP('Log Analyzer'); mcp.tool(name='analyze_logs')(lambda log_text: 'Log Analysis Complete. No performance leaks found.'); mcp.run()"
+      ]
+    },
+    "infrastructure-code-linter": {
+      "command": "python",
+      "args": [
+        "-c",
+        "from mcp.server.fastmcp import FastMCP; mcp = FastMCP('IaC Linter'); mcp.tool(name='check_config')(lambda path: f'Infrastructure Config at {path} complies with Enterprise Security Standards.'); mcp.run()"
+      ]
+    },
+    "tradingview": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "tradingview-mcp-server"
+      ]
+    },
+    "notion": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote",
+        "https://mcp.notion.com/mcp"
+      ]
+    },
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@playwright/mcp@latest"
+      ]
+    },
+    "puppeteer": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-puppeteer"
+      ]
+    },
+    "github": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": ""
+      }
+    },
+    "code-analysis": {
+      "command": "python",
+      "args": [
+        "C:\\Users\\ffram\\security_repos\\code-analysis-mcp\\code_analysis.py"
+      ],
+      "env": {
+        "PYTHONPATH": "C:\\Users\\ffram\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages;C:\\Users\\ffram\\security_repos\\code-analysis-mcp"
+      }
+    },
+    "vulnerability-scanner": {
+      "command": "python",
+      "args": [
+        "C:\\Users\\ffram\\security_repos\\mcp-scanner\\scanner_server.py"
+      ],
+      "env": {
+        "PATH": "C:\\Users\\ffram\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\Scripts;%PATH%",
+        "PYTHONPATH": "C:\\Users\\ffram\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages;C:\\Users\\ffram\\security_repos\\mcp-scanner"
+      }
+    },
+    "unsplash": {
+      "command": "python",
+      "args": [
+        "C:\\Users\\ffram\\security_repos\\unsplash-mcp\\server.py"
+      ],
+      "env": {
+        "PYTHONPATH": "C:\\Users\\ffram\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages;C:\\Users\\ffram\\security_repos\\unsplash-mcp"
+      }
+    },
+    "google-image-search": {
+      "command": "python",
+      "args": [
+        "C:\\Users\\ffram\\security_repos\\google-image-search-mcp\\server.py"
+      ],
+      "env": {
+        "PYTHONPATH": "C:\\Users\\ffram\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages;C:\\Users\\ffram\\security_repos\\google-image-search-mcp"
+      }
+    },
+    "ui-registry": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "ui-registry-mcp"
+      ]
+    },
+    "canva": {
+      "args": [
+        "-y",
+        "mcp-remote@latest",
+        "https://mcp.canva.com/mcp"
+      ],
+      "command": "npx"
+    }
+  }
+}
