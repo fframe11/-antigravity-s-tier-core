@@ -1,0 +1,1 @@
+{"name":"get_photo","description":"Retrieve details and direct high-resolution URLs for a specific Unsplash photo ID.\n\nArgs:\n    photo_id: The Unsplash photo ID or identifier.\n","parameters":{"properties":{"photo_id":{"title":"Photo Id","type":"string"}},"required":["photo_id"],"title":"get_photoArguments","type":"object"}}

@@ -1,0 +1,20 @@
+{
+  "name": "recommend_icons",
+  "description": "Get smart recommendations of icons for a specific business use case.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "useCase": {
+        "type": "string",
+        "description": "Description of the intent (e.g. 'e-commerce checkout', 'financial metrics')"
+      },
+      "limit": {
+        "type": "integer",
+        "description": "Max recommendations to return"
+      }
+    },
+    "required": [
+      "useCase"
+    ]
+  }
+}

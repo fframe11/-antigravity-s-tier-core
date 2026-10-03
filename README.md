@@ -73,8 +73,13 @@ antigravity-s-tier-core/
 │       ├── unsplash-mcp/       # Context-aware authentic photo discovery
 │       └── google-image-search-mcp/ # Technical diagram & product reference search
 ├── plugins/                    # Remotion video engineering & rules plugins
-├── install.ps1                 # Windows PowerShell Installer
-├── install.sh                  # macOS/Linux POSIX Installer
+├── antigravity-system/         # Native Antigravity Runtime Internals
+│   ├── mcp/                    # 33 Tool suites schemas & instructions (317 JSON files)
+│   ├── builtin/                # 4 Native built-in skills (agy-customizations, etc.)
+│   ├── bin/                    # Agentapi CLI launcher & webm encoder
+│   └── prompting/              # System prompt augmentations & browser specs
+├── install.ps1                 # Windows PowerShell Installer (8-step automated setup)
+├── install.sh                  # macOS/Linux POSIX Installer (8-step automated setup)
 └── README.md                   # This documentation
 ```
 

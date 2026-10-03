@@ -1,0 +1,1 @@
+{"name":"redis_set","description":"","parameters":{"properties":{"key":{"title":"key","type":"string"},"val":{"title":"val","type":"string"}},"required":["key","val"],"title":"\u003clambda\u003eArguments","type":"object"}}

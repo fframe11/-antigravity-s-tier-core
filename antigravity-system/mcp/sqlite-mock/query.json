@@ -1,0 +1,1 @@
+{"name":"query","description":"","parameters":{"properties":{"sql":{"title":"Sql","type":"string"}},"required":["sql"],"title":"queryArguments","type":"object"}}

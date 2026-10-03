@@ -1,0 +1,1 @@
+{"name":"list_presets","description":"List all available preset screening strategies. Returns key, name, and description for each preset. Use the key with get_preset.","parameters":{"additionalProperties":false,"properties":{},"type":"object"}}

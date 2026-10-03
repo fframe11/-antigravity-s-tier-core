@@ -1,0 +1,29 @@
+{
+  "name": "generate_histogram_chart",
+  "description": "Generate a histogram chart for frequency distribution across numerical bins.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "type": "array",
+        "description": "Array of data records for chart rendering."
+      },
+      "title": {
+        "type": "string",
+        "description": "Visual title answering the core analytical question."
+      },
+      "x_field": {
+        "type": "string",
+        "description": "Dimension/category field name."
+      },
+      "y_field": {
+        "type": "string",
+        "description": "Metric/numerical field name."
+      }
+    },
+    "required": [
+      "data",
+      "title"
+    ]
+  }
+}

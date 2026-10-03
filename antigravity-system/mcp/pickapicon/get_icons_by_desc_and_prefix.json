@@ -1,0 +1,18 @@
+{
+  "name": "get_icons_by_desc_and_prefix",
+  "description": "Get icons matching description and repository prefix (e.g. ant-design, lucide, heroicons)",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "desc": {
+        "type": "string",
+        "description": "Description of the icon in English (e.g. search, user, settings, chevron)"
+      },
+      "prefix": {
+        "type": "string",
+        "description": "Icon collection prefix (e.g. ant-design, lucide, mdi)"
+      }
+    },
+    "required": ["desc"]
+  }
+}

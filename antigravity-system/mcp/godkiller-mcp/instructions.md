@@ -1,0 +1,1 @@
+Antigravity phase/evidence orchestrator. Prefer gk_phase + gk_meta.plan_validate before edits; ultradeep uses per-file think→plan→edit; gk_verify.bundle before claim_done.

@@ -1,0 +1,20 @@
+{
+  "name": "start_mock_server",
+  "description": "Start a mock server strictly adhering to OpenAPI specification to prevent frontend-backend drift.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "spec_path": {
+        "type": "string",
+        "description": "Path to OpenAPI spec file."
+      },
+      "port": {
+        "type": "integer",
+        "description": "Mock server port (default 9000)"
+      }
+    },
+    "required": [
+      "spec_path"
+    ]
+  }
+}

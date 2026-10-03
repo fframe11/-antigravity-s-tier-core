@@ -1,0 +1,1 @@
+{"name":"read_file","description":"Read and display the contents of a file from the repository.","parameters":{"properties":{"file_path":{"title":"File Path","type":"string"}},"required":["file_path"],"type":"object"}}

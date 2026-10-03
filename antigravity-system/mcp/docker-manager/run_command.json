@@ -1,0 +1,1 @@
+{"name":"run_command","description":"Execute a command inside a Docker container service","parameters":{"properties":{"command":{"description":"The command to execute in the container","type":"string"},"service":{"description":"Docker Compose service name (optional, uses default: laravel_app if not specified)","type":"string"}},"required":["command"],"type":"object"}}

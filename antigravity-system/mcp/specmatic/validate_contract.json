@@ -1,0 +1,21 @@
+{
+  "name": "validate_contract",
+  "description": "Validate backend API endpoints against OpenAPI specification contract.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "spec_path": {
+        "type": "string",
+        "description": "Path to OpenAPI spec file."
+      },
+      "base_url": {
+        "type": "string",
+        "description": "Target server URL e.g. http://localhost:3000"
+      }
+    },
+    "required": [
+      "spec_path",
+      "base_url"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "get_icon_detail_by_prefix_and_name",
+  "description": "Get SVG detail code by prefix and icon name",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "svg_name": {
+        "type": "string",
+        "description": "Icon SVG name to match single icon exactly (e.g. search-outline, user-fill)"
+      },
+      "svg_list": {
+        "type": "array",
+        "items": { "type": "string" },
+        "description": "Optional batch of SVG icon names"
+      },
+      "prefix": {
+        "type": "string",
+        "description": "Icon collection prefix (e.g. ant-design, lucide, heroicons)"
+      }
+    },
+    "required": []
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "search_icons",
+  "description": "Search across 200+ icon libraries powered by Iconify. Returns icon IDs for get_icon.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "query": {
+        "type": "string",
+        "description": "Search query (e.g. 'arrow', 'home', 'user', 'check')"
+      },
+      "limit": {
+        "type": "integer",
+        "description": "Max results to return (1-999, default 32)"
+      },
+      "prefix": {
+        "type": "string",
+        "description": "Filter by collection prefix (e.g. 'lucide', 'heroicons', 'mdi')"
+      },
+      "category": {
+        "type": "string",
+        "description": "Filter by category"
+      }
+    },
+    "required": [
+      "query"
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+{"name":"jq_validate","description":"Validate if a string is valid JSON","parameters":{"properties":{"json_data":{"description":"The JSON data to validate","type":"string"}},"required":["json_data"],"type":"object"}}

@@ -1,0 +1,16 @@
+{
+  "name": "run_e2e_test",
+  "description": "Run automated E2E browser and package inspection tests.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "target": {
+        "type": "string",
+        "description": "Target test suite or package path"
+      }
+    },
+    "required": [
+      "target"
+    ]
+  }
+}

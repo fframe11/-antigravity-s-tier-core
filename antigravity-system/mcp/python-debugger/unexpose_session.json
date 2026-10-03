@@ -1,0 +1,1 @@
+{"name":"unexpose_session","description":"Close a session's DAP mirror endpoint and disconnect any attached IDE clients. Succeeds as a no-op if the session is not exposed","parameters":{"properties":{"sessionId":{"type":"string"}},"required":["sessionId"],"type":"object"}}

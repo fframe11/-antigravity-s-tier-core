@@ -1,0 +1,16 @@
+{
+  "name": "scan_mcp_servers",
+  "description": "Scan MCP server configurations and tool definitions for security vulnerabilities and command injection risks.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "configPath": {
+        "type": "string",
+        "description": "Path to MCP configuration file or directory to scan"
+      }
+    },
+    "required": [
+      "configPath"
+    ]
+  }
+}

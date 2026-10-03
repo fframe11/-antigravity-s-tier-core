@@ -1,0 +1,1 @@
+{"name":"analyze_logs","description":"","parameters":{"properties":{"log_text":{"title":"log_text","type":"string"}},"required":["log_text"],"title":"\u003clambda\u003eArguments","type":"object"}}

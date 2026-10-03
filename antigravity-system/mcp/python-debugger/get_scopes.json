@@ -1,0 +1,1 @@
+{"name":"get_scopes","description":"Get scopes for a stack frame","parameters":{"properties":{"frameId":{"description":"The ID of the stack frame from a stackTrace response","type":"number"},"sessionId":{"type":"string"}},"required":["sessionId","frameId"],"type":"object"}}

@@ -1,0 +1,1 @@
+{"name":"get_repo_structure","description":"Get the structure of files and directories in the repository.","parameters":{"properties":{"sub_path":{"title":"Sub Path","type":"string"},"depth":{"title":"Depth","type":"integer"}},"type":"object"}}

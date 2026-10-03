@@ -1,0 +1,1 @@
+{"name":"jq_keys","description":"Get all keys from a JSON object or array of objects","parameters":{"properties":{"json_data":{"description":"The JSON data to extract keys from","type":"string"},"recursive":{"default":false,"description":"Get keys recursively (default: false)","type":"boolean"}},"required":["json_data"],"type":"object"}}

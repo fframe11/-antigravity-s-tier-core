@@ -1,0 +1,1 @@
+{"name":"check_config","description":"","parameters":{"properties":{"path":{"title":"path","type":"string"}},"required":["path"],"title":"\u003clambda\u003eArguments","type":"object"}}

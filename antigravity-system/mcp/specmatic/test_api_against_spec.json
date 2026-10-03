@@ -1,0 +1,20 @@
+{
+  "name": "test_api_against_spec",
+  "description": "Execute automated consumer-driven contract testing suite against API endpoints.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "spec_path": {
+        "type": "string",
+        "description": "Path to OpenAPI spec file."
+      },
+      "endpoint": {
+        "type": "string",
+        "description": "Specific endpoint to test or '*' for all"
+      }
+    },
+    "required": [
+      "spec_path"
+    ]
+  }
+}

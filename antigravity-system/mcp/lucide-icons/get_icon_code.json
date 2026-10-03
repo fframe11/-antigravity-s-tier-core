@@ -1,0 +1,16 @@
+{
+  "name": "get_icon_code",
+  "description": "Generate JSX/React code example and tree-shaken import statement for a Lucide icon.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "iconName": {
+        "type": "string",
+        "description": "Name of the icon (e.g. 'BarChart3', 'ShieldCheck')"
+      }
+    },
+    "required": [
+      "iconName"
+    ]
+  }
+}

@@ -108,7 +108,7 @@ if (-not $SkipMcp) {
 }
 
 # 6. Install Lessons & Postmortems DB
-Write-Host "`n[7/7] Installing Epistemic Lessons & Incident Postmortems..." -ForegroundColor Yellow
+Write-Host "`n[7/8] Installing Epistemic Lessons & Incident Postmortems..." -ForegroundColor Yellow
 $godkillerDir = Join-Path $geminiDir "godkiller_data"
 New-Item -ItemType Directory -Path $godkillerDir -Force | Out-Null
 $srcLessonsDb = Join-Path $repoRoot "lessons\lessons.db"
@@ -117,11 +117,24 @@ if (Test-Path $srcLessonsDb) {
     Write-Host "  -> Epistemic lessons database synced to $godkillerDir\lessons.db" -ForegroundColor Green
 }
 
+# 7. Install Antigravity System Internals (MCP Schemas, Builtin Skills, Bin, Prompting)
+Write-Host "`n[8/8] Installing Antigravity System Internals (MCP Tool Schemas, Builtins, Tools)..." -ForegroundColor Yellow
+$agSystemDir = Join-Path $geminiDir "antigravity"
+New-Item -ItemType Directory -Path $agSystemDir -Force | Out-Null
+$srcAgSystem = Join-Path $repoRoot "antigravity-system"
+if (Test-Path $srcAgSystem) {
+    Copy-Item -Path "$srcAgSystem\*" -Destination $agSystemDir -Recurse -Force
+    Write-Host "  -> Antigravity MCP tool schemas (33 tool suites) & builtin skills deployed to $agSystemDir" -ForegroundColor Green
+}
+
 Write-Host "`n==========================================================" -ForegroundColor Green
 Write-Host "  INSTALLATION COMPLETE! ANTIGRAVITY IS NOW S-TIER READY   " -ForegroundColor Green
 Write-Host "==========================================================" -ForegroundColor Green
 Write-Host "What's now active:" -ForegroundColor Cyan
 Write-Host "  [+] 98+ Production Skills (Frontend 5-Source, Stitch, OWASP, FastMCP, etc.)"
+Write-Host "  [+] 4 Native Antigravity Built-in Skills (agy-customizations, generative_ui, etc.)"
+Write-Host "  [+] 33 MCP Tool Schema Suites (Godkiller, Canva, Notion, Playwright, Semgrep, etc.)"
+Write-Host "  [+] 4-Layer Git Push Safety Policy (git-push-policy.md)"
 Write-Host "  [+] User Persona (Senior Dev Voice, Cognitive Thinking Reference & Archive)"
 Write-Host "  [+] API Incident Lessons (lessons.db, sprint-1-auth-api-fix, BOLA/BFLA guards)"
 Write-Host "  [+] Enterprise Guardrails (Mermaid Parity, AI-Slop Audits, Boundary Checks)"

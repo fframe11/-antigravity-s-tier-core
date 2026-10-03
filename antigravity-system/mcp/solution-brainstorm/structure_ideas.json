@@ -1,0 +1,1 @@
+{"name":"structure_ideas","description":"","parameters":{"properties":{"problem":{"title":"problem","type":"string"}},"required":["problem"],"title":"\u003clambda\u003eArguments","type":"object"}}

@@ -1,0 +1,13 @@
+{
+  "name": "list_categories",
+  "description": "List all available icon categories in Lucide.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "limit": {
+        "type": "integer",
+        "description": "Max categories to return"
+      }
+    }
+  }
+}

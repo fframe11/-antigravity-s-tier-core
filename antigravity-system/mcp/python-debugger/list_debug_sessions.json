@@ -1,0 +1,1 @@
+{"name":"list_debug_sessions","description":"List all active debugging sessions. Paused sessions include lastStop with the reason for the most recent stop (e.g. \"breakpoint\" vs \"exception\")","parameters":{"properties":{},"type":"object"}}

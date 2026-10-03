@@ -1,0 +1,29 @@
+{
+  "name": "generate_pie_chart",
+  "description": "Generate a donut/pie chart for part-to-whole proportions (strictly <=4 categories).",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "type": "array",
+        "description": "Array of data records for chart rendering."
+      },
+      "title": {
+        "type": "string",
+        "description": "Visual title answering the core analytical question."
+      },
+      "x_field": {
+        "type": "string",
+        "description": "Dimension/category field name."
+      },
+      "y_field": {
+        "type": "string",
+        "description": "Metric/numerical field name."
+      }
+    },
+    "required": [
+      "data",
+      "title"
+    ]
+  }
+}

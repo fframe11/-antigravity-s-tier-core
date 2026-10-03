@@ -1,0 +1,1 @@
+{"name":"jq_format","description":"Format and prettify JSON data","parameters":{"properties":{"json_data":{"description":"The JSON data to format","type":"string"}},"required":["json_data"],"type":"object"}}

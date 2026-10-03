@@ -1,0 +1,1 @@
+{"name":"execute","description":"","parameters":{"properties":{"sql":{"title":"Sql","type":"string"}},"required":["sql"],"title":"executeArguments","type":"object"}}

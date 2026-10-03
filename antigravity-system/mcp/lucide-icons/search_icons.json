@@ -1,0 +1,24 @@
+{
+  "name": "search_icons",
+  "description": "Search for icons from Lucide by name or category using partial matching.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "query": {
+        "type": "string",
+        "description": "Search term for icon name (e.g. 'chart', 'shield', 'cart')"
+      },
+      "category": {
+        "type": "string",
+        "description": "Optional category to filter by (e.g. 'Finance', 'Design')"
+      },
+      "limit": {
+        "type": "integer",
+        "description": "Max results to return (default 20)"
+      }
+    },
+    "required": [
+      "query"
+    ]
+  }
+}

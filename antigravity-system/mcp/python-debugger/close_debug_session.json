@@ -1,0 +1,1 @@
+{"name":"close_debug_session","description":"Close a debugging session","parameters":{"properties":{"sessionId":{"type":"string"}},"required":["sessionId"],"type":"object"}}

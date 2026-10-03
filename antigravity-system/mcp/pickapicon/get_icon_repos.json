@@ -1,0 +1,9 @@
+{
+  "name": "get_icon_repos",
+  "description": "Get all icon repository names available in the catalog",
+  "parameters": {
+    "type": "object",
+    "properties": {},
+    "required": []
+  }
+}
