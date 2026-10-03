@@ -10,7 +10,7 @@
 หากต้องการนำการตั้งค่าทั้งหมดนี้ไปติดตั้งบนเครื่องใหม่ หรือเครื่องอื่น ให้เปิด Antigravity บนเครื่องนั้น แล้ว **คัดลอก Prompt ด้านล่างนี้ส่งให้ Antigravity จัดการทันที**:
 
 ```text
-โคลน repository https://github.com/fframe11/antigravity-s-tier-core.git มาไว้ที่เครื่อง 
+โคลน repository https://github.com/fframe11/-antigravity-s-tier-core.git มาไว้ที่เครื่อง 
 จากนั้นให้รันสคริปต์ติดตั้งอัตโนมัติ:
 - หากเป็น Windows (PowerShell) ให้รัน:
   powershell -ExecutionPolicy Bypass -File .\antigravity-s-tier-core\install.ps1 -Force
@@ -35,14 +35,14 @@ Clone this repository and run the automated installer for your operating system:
 
 ### Windows (PowerShell)
 ```powershell
-git clone https://github.com/fframe11/antigravity-s-tier-core.git
+git clone https://github.com/fframe11/-antigravity-s-tier-core.git
 cd antigravity-s-tier-core
 .\install.ps1 -Force
 ```
 
 ### macOS / Linux (Bash)
 ```bash
-git clone https://github.com/fframe11/antigravity-s-tier-core.git
+git clone https://github.com/fframe11/-antigravity-s-tier-core.git
 cd antigravity-s-tier-core
 chmod +x install.sh
 ./install.sh
@@ -178,7 +178,7 @@ cd c:\Users\ffram\Documents\antigravity\antigravity-s-tier-core
 
 # 1. Create a new repository on GitHub named "antigravity-s-tier-core"
 # 2. Add your remote
-git remote add origin https://github.com/fframe11/antigravity-s-tier-core.git
+git remote add origin https://github.com/fframe11/-antigravity-s-tier-core.git
 
 # 3. Rename branch to main (if not already)
 git branch -M main
