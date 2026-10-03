@@ -42,7 +42,7 @@ REPOS = [
     ("daytona", "https://github.com/daytonaio/daytona.git")
 ]
 
-BASE_DIR = r"C:\Users\ffram\security_repos"
+BASE_DIR = os.path.expanduser(r"~\security_repos")
 
 def clone_repo(name, url):
     target_path = os.path.join(BASE_DIR, name)

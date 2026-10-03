@@ -5,9 +5,11 @@ from mcp.server.fastmcp import FastMCP
 
 mcp = FastMCP("Vulnerability Scanner")
 
-SEMGREP_DIR = r"C:\Users\ffram\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\Scripts"
-SEMGREP_EXE = os.path.join(SEMGREP_DIR, "semgrep.exe")
-GITLEAKS_EXE = r"C:\Users\ffram\.gemini\tmp\bin\gitleaks.exe"
+import shutil
+user_home = os.path.expanduser("~")
+SEMGREP_EXE = shutil.which("semgrep") or os.path.join(user_home, ".gemini", "tmp", "bin", "semgrep.exe")
+GITLEAKS_EXE = shutil.which("gitleaks") or os.path.join(user_home, ".gemini", "tmp", "bin", "gitleaks.exe")
+SEMGREP_DIR = os.path.dirname(SEMGREP_EXE) if SEMGREP_EXE else ""
 SCRIPTS_ENV = os.environ.copy()
 SCRIPTS_ENV["PATH"] = SEMGREP_DIR + os.pathsep + SCRIPTS_ENV.get("PATH", "")
 

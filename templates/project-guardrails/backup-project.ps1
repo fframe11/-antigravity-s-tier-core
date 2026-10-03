@@ -11,7 +11,8 @@ $ProjectRoot = $PSScriptRoot
 $ProjectName = (Get-Item $ProjectRoot).Name
 
 if (-not $BackupDir) {
-    $BackupDir = "C:\Users\ffram\project_backups\$ProjectName"
+    $userHome = [System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::UserProfile)
+    $BackupDir = Join-Path $userHome "project_backups\$ProjectName"
 }
 
 $Timestamp = Get-Date -Format "yyyy-MM-dd_HH-mm-ss"

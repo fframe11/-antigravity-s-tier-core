@@ -7,7 +7,11 @@ param (
 )
 
 $ErrorActionPreference = "Stop"
-$TemplateDir = "C:\Users\ffram\.gemini\templates\project-guardrails"
+$userHome = [System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::UserProfile)
+$TemplateDir = Join-Path $userHome ".gemini\templates\project-guardrails"
+if (-not (Test-Path $TemplateDir)) {
+    $TemplateDir = Join-Path $PSScriptRoot "project-guardrails"
+}
 
 Write-Host "==========================================================" -ForegroundColor Cyan
 Write-Host "🚀 Initializing S-Tier Guardrails in: $TargetDir" -ForegroundColor Cyan

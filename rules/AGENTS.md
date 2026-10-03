@@ -1,10 +1,14 @@
 # Antigravity Guidelines & Rules
 
+## 0. Universal Dynamic Path Resolution (Multi-Machine Portability Invariant)
+1. **Dynamic User Profile Resolution**: All paths prefixed with `~` (e.g. `~/.gemini/...` or `~/security_repos/...`) MUST be dynamically resolved by Antigravity to the current machine's user profile home directory (`$env:USERPROFILE` on Windows, `$HOME` on Linux/macOS). Antigravity MUST NEVER assume a hardcoded username.
+2. **Environment Variable Fallback**: When referencing system paths, resolve dynamically via `%LOCALAPPDATA%` on Windows, `~/Library/Application Support` on macOS, or `~/.config` on Linux.
+
 ## 1. Task Orchestration & Verification (Godkiller MCP & Strict MCP Protocol)
 Whenever executing tasks, you MUST use the `godkiller-mcp` tools for orchestration and verification:
 - **Planning Phase**: Prior to making any code modifications or edits, run `gk_phase` with the action `assert`, and validate your approach using `gk_meta` with the action `plan_validate`.
 - **Verification Phase**: Before claiming a task is done, run verification checks (such as tests or verification commands) using `gk_verify` with the action `bundle`, and then call `gk_phase` with the action `claim_done`.
-- **Guidelines**: Follow the workflow best practices in `C:\Users\ffram\.gemini\antigravity\mcp\godkiller-mcp\instructions.md`.
+- **Guidelines**: Follow the workflow best practices in `~/.gemini\antigravity\mcp\godkiller-mcp\instructions.md`.
 
 ### Strict Operational Protocol for MCP Servers
 You operate as an Enterprise Solution Architect & Principal DevSecOps team. You MUST select and run MCP tools according to the following strict mapping:
@@ -25,7 +29,7 @@ Whenever working on backend development, secure code review, database design, AP
   - `owasp-top-10-web`: For web application security reviews and OWASP Top 10 guidelines.
   - `owasp-cheatsheets`: For detailed secure coding practices (e.g., JWT, SQL injection, Session Management).
   - `code-security` (from semgrep): For general secure coding across languages.
-  - Any other specialized security role/skill located under `C:\Users\ffram\security_repos\SecuritySkills\`.
+  - Any other specialized security role/skill located under `~/security_repos\SecuritySkills\`.
 - **Secure Coding Checklist**:
   - Ensure all input validation is implemented.
   - Check for SQL Injection (always use parameterized queries/prepared statements).
@@ -36,9 +40,9 @@ Whenever working on backend development, secure code review, database design, AP
 ## 3. Frontend Design & Craft Guidelines (Impeccable, Gridgeist & Hallmark)
 Whenever working on frontend development, UI/UX design, responsive layouts, web styling, page layouts, components, or UI reviews/audits:
 - **Use Frontend Design Skills**: You MUST actively invoke, reference, and adhere to the guidelines in:
-  - `impeccable`: Located at `C:\Users\ffram\.gemini\config\skills\impeccable/` for professional interface audits, critiques, and craftsmanship.
-  - `gridgeist`: Located at `C:\Users\ffram\.gemini\config\skills\gridgeist/` for layout composition, grid alignment, typography hierarchy, and avoiding generic SaaS templates.
-  - `hallmark`: Located at `C:\Users\ffram\.gemini\config\skills\hallmark/` for anti-AI-slop design structures, auditing, redesigning, and design extraction from URLs/screenshots.
+  - `impeccable`: Located at `~/.gemini\config\skills\impeccable/` for professional interface audits, critiques, and craftsmanship.
+  - `gridgeist`: Located at `~/.gemini\config\skills\gridgeist/` for layout composition, grid alignment, typography hierarchy, and avoiding generic SaaS templates.
+  - `hallmark`: Located at `~/.gemini\config\skills\hallmark/` for anti-AI-slop design structures, auditing, redesigning, and design extraction from URLs/screenshots.
 - **Design Principles**:
   - Avoid AI slop, placeholder content, and generic templates.
   - Limit visual refinement checks to desktop and mobile simultaneously.
@@ -47,7 +51,7 @@ Whenever working on frontend development, UI/UX design, responsive layouts, web 
 
 ## 4. AI Prompt Engineering & Prompt Generation (Prompt-Master)
 Whenever the user asks you to write, fix, improve, or adapt a prompt for any AI tool, or when formulating prompt strategies:
-- **Use the Prompt-Master Skill**: You MUST actively invoke, reference, and adhere to the guidelines in the `prompt-master` skill located at `C:\Users\ffram\.gemini\config\skills\prompt-master/`.
+- **Use the Prompt-Master Skill**: You MUST actively invoke, reference, and adhere to the guidelines in the `prompt-master` skill located at `~/.gemini\config\skills\prompt-master/`.
 - **Identity & Role**: Operate as a professional prompt engineer. Extract the user's intent, identify the target tool, and output a single production-ready prompt optimized for that specific tool with zero wasted tokens.
 - **Constraints**:
   - Do not output a prompt without first confirming the target tool (ask if ambiguous).

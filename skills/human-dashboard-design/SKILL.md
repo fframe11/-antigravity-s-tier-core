@@ -8,7 +8,7 @@ description: Human-designed, enterprise-grade admin and BI dashboard patterns ba
 ## Overview
 AI agents naturally default to "AI slop" when designing dashboards: low data density, oversized rounded cards (`rounded-3xl`), heavy drop shadows (`shadow-2xl`), saturated neon badges, and disconnected floating widgets.
 
-This skill grounds frontend dashboard development in **real human-designed engineering standards** extracted from production-grade reference implementations (`C:\Users\ffram\security_repos\next-shadcn-admin-dashboard` and `C:\Users\ffram\security_repos\shadcndashboard`).
+This skill grounds frontend dashboard development in **real human-designed engineering standards** extracted from production-grade reference implementations (`~/security_repos\next-shadcn-admin-dashboard` and `~/security_repos\shadcndashboard`).
 
 ---
 
@@ -177,7 +177,7 @@ src/app/(main)/dashboard/[domain]/
 
 ## 4. 19 Production Domain Archetypes (Reference Map)
 
-When designing a dashboard for a specific domain, refer to the battle-tested archetypes in `C:\Users\ffram\security_repos\next-shadcn-admin-dashboard\src\app\(main)\dashboard\`:
+When designing a dashboard for a specific domain, refer to the battle-tested archetypes in `~/security_repos\next-shadcn-admin-dashboard\src\app\(main)\dashboard\`:
 
 1. **Finance** (`/dashboard/finance`): Net worth, cash flow velocity, income breakdown, wallet allocation, scheduled debits.
 2. **Analytics** (`/dashboard/analytics`): Real-time visitors, session duration, device share, bounce rate, geographic distribution.

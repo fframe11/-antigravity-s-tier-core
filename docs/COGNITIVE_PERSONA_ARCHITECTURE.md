@@ -7,8 +7,8 @@
 ---
 
 ### เอกสารและไฟล์ต้นทาง
-- **ไฟล์ Skill ที่ใช้งานจริง**: [SKILL.md](file:///C:/Users/ffram/.gemini/config/skills/user-persona/SKILL.md) (345 บรรทัด, สถาปัตยกรรม 3 ชั้น, Zero Arrow Symbols)
-- **ไฟล์ประวัติและคลังกรณีศึกษาเดิม**: [SKILL_archive_v1.md](file:///C:/Users/ffram/.gemini/config/skills/user-persona/SKILL_archive_v1.md) (1,815 บรรทัด, บันทึกการทดลอง 51 หัวข้อ)
+- **ไฟล์ Skill ที่ใช้งานจริง**: [`SKILL.md`](../skills/user-persona/SKILL.md) (345 บรรทัด, สถาปัตยกรรม 3 ชั้น, Zero Arrow Symbols)
+- **ไฟล์ประวัติและคลังกรณีศึกษาเดิม**: [`SKILL_archive_v1.md`](../skills/user-persona/SKILL_archive_v1.md) (1,815 บรรทัด, บันทึกการทดลอง 51 หัวข้อ)
 
 ---
 

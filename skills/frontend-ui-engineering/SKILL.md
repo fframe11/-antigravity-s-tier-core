@@ -304,7 +304,7 @@ function useToggleTask() {
 ```
 ## Production Dashboard Engineering (Human-Designed Admin & BI Standards)
 
-When building dashboards, admin consoles, or BI views, follow the human-designed tokens in `human-dashboard-design` and reference repositories (`C:\Users\ffram\security_repos\next-shadcn-admin-dashboard`):
+When building dashboards, admin consoles, or BI views, follow the human-designed tokens in `human-dashboard-design` and reference repositories (`~/security_repos\next-shadcn-admin-dashboard`):
 
 1. **Unified Container Grid over Floating Cards**:
    - Do NOT create disconnected floating cards with heavy box shadows (`shadow-xl`) and `rounded-3xl`.

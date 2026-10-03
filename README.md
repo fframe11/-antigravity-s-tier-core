@@ -10,21 +10,26 @@
 หากต้องการนำการตั้งค่าทั้งหมดนี้ไปติดตั้งบนเครื่องใหม่ หรือเครื่องอื่น ให้เปิด Antigravity บนเครื่องนั้น แล้ว **คัดลอก Prompt ด้านล่างนี้ส่งให้ Antigravity จัดการทันที**:
 
 ```text
-โคลน repository https://github.com/fframe11/-antigravity-s-tier-core.git มาไว้ที่เครื่อง 
-จากนั้นให้รันสคริปต์ติดตั้งอัตโนมัติ:
-- หากเป็น Windows (PowerShell) ให้รัน:
-  powershell -ExecutionPolicy Bypass -File .\antigravity-s-tier-core\install.ps1 -Force
-- หากเป็น macOS / Linux (Bash) ให้รัน:
-  chmod +x ./antigravity-s-tier-core/install.sh && ./antigravity-s-tier-core/install.sh
+โคลน repository https://github.com/fframe11/-antigravity-s-tier-core.git มาไว้ที่เครื่อง
+จากนั้นให้สำรวจหา User Home Directory ของเครื่องนี้โดยอัตโนมัติ (Dynamic Path Resolution เช่น $env:USERPROFILE บน Windows หรือ $HOME บน macOS/Linux) แล้วรันสคริปต์ติดตั้งเพื่อทับการตั้งค่าเดิม (~/.gemini) ให้กลายเป็นระบบระดับ Enterprise S-Tier:
 
-โดยให้ติดตั้งทับการตั้งค่าเดิมทั้งหมด (~/.gemini) เพื่ออัปเกรดให้ Antigravity บนเครื่องนี้กลายเป็นระบบระดับ Enterprise S-Tier โดยสมบูรณ์:
-1. ติดตั้ง 153+ S-Tier Skills (Frontend 5-Source, Stitch Design-First, Human Dashboard, OWASP, Security Hardening, etc.)
-2. ติดตั้ง 4 Native Antigravity Built-in Skills และ 33 MCP Tool Schema Suites (317 JSON files)
-3. คัดลอก User Persona (เสียงวิศวกรอาวุโสสมจริง), กฎ Universal Bot Template Ban, และ 4-Layer Git Push Policy
-4. ติดตั้งฐานข้อมูลบทเรียนข้อผิดพลาดระบบ (lessons.db / API postmortems) เข้าสู่ godkiller_data
-5. เชื่อมต่อ MCP Server Mesh ทั้งหมด (Canva, Notion, Playwright, Semgrep, UI-Registry, etc.) พร้อมปรับ Path ให้อัตโนมัติ
+1. ตรวจสอบระบบปฏิบัติการและรันตัวติดตั้ง:
+   - หากเป็น Windows (PowerShell) ให้รัน:
+     powershell -ExecutionPolicy Bypass -File .\antigravity-s-tier-core\install.ps1 -Force
+   - หากเป็น macOS / Linux (Bash) ให้รัน:
+     chmod +x ./antigravity-s-tier-core/install.sh && ./antigravity-s-tier-core/install.sh
 
-เมื่อติดตั้งเสร็จแล้ว ให้รันตรวจสอบสถานะ Skills และ MCP เพื่อยืนยันว่าพร้อมใช้งานทันที
+2. ปรับแต่ง Path ให้ตรงกับเครื่องปัจจุบันโดยอัตโนมัติ (Zero Hardcoded Paths):
+   - สคริปต์จะแปลง Path ทั้งหมดใน GEMINI.md, AGENTS.md, และ mcp_config.json ให้แมปตรงกับ User Profile ของเครื่องนี้อัตโนมัติ ห้ามมี path ชี้ไปที่เครื่องเดิมหรือ username อื่น
+   - ติดตั้ง 153+ S-Tier Skills (Frontend 5-Source, Stitch, Human Dashboard, OWASP, Security Hardening, etc.) ลงใน ~/.gemini/config/skills/
+   - ติดตั้ง 33 MCP Tool Schema Suites (317 JSON files) และ 4 Built-in Skills ลงใน ~/.gemini/antigravity/
+   - ติดตั้ง User Persona (เสียงวิศวกรอาวุโสสมจริง), กฎ Universal Bot Template Ban, และ 4-Layer Git Push Policy
+   - ซิงค์บทเรียนข้อผิดพลาดระบบ (lessons.db / 21 UI journey manifests) เข้าสู่ godkiller_data
+
+3. เมื่อติดตั้งเสร็จ ให้รันตรวจสอบสถานะ:
+   - สแกนดูว่า ~/.gemini/config/skills/ มีครบ 153 skills หรือไม่
+   - ตรวจสอบว่าไฟล์ GEMINI.md และ mcp_config.json แมป path ถูกต้องตรงกับเครื่องนี้
+   - รายงานสรุปสถานะความพร้อมใช้งานให้ผู้ใช้ทราบ
 ```
 
 ---

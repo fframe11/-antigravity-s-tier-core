@@ -61,10 +61,14 @@ if (Test-Path $srcTemplates) {
 Write-Host "`n[4/6] Installing Global Cognitive Rules & Invariants..." -ForegroundColor Yellow
 $srcRules = Join-Path $repoRoot "rules"
 if (Test-Path $srcRules) {
+    # Resolve '~' paths to active $userHome for native machine path compatibility
     $rawGemini = Get-Content -Path "$srcRules\GEMINI.md" -Raw -Encoding UTF8
-    $adaptedGemini = $rawGemini.Replace('C:\Users\ffram', $userHome)
+    $adaptedGemini = $rawGemini.Replace('~/.gemini', "$userHome\.gemini").Replace('~\\.gemini', "$userHome\.gemini").Replace('~/security_repos', "$userHome\security_repos").Replace('C:\Users\ffram', $userHome)
     $adaptedGemini | Set-Content -Path "$geminiDir\GEMINI.md" -Encoding UTF8
-    Copy-Item -Path "$srcRules\AGENTS.md" -Destination $geminiDir -Force
+
+    $rawAgents = Get-Content -Path "$srcRules\AGENTS.md" -Raw -Encoding UTF8
+    $adaptedAgents = $rawAgents.Replace('~/.gemini', "$userHome\.gemini").Replace('~\\.gemini', "$userHome\.gemini").Replace('~/security_repos', "$userHome\security_repos").Replace('C:\Users\ffram', $userHome)
+    $adaptedAgents | Set-Content -Path "$geminiDir\AGENTS.md" -Encoding UTF8
     Write-Host "  -> Copied GEMINI.md and AGENTS.md to $geminiDir (with user path auto-adapted)" -ForegroundColor Green
 }
 

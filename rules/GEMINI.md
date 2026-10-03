@@ -1,4 +1,6 @@
-# Antigravity Guidelines & Rules
+## 0.0 Universal Dynamic Path Resolution (Multi-Machine Portability Invariant)
+1. **Dynamic User Profile Resolution**: All paths prefixed with `~` (e.g. `~/.gemini/...` or `~/security_repos/...`) MUST be dynamically resolved by Antigravity to the current machine's user profile home directory (`$env:USERPROFILE` on Windows, `$HOME` on Linux/macOS). Antigravity MUST NEVER assume a hardcoded username.
+2. **Environment Variable Fallback**: When referencing system paths, resolve dynamically via `%LOCALAPPDATA%` on Windows, `~/Library/Application Support` on macOS, or `~/.config` on Linux.
 
 ## 0. Automated Context Re-Hydration & Model Handoff (Non-Negotiable)
 1. Whenever a session starts or a model change occurs, you MUST assume you have **AMNESIA**.
@@ -20,8 +22,8 @@ Whenever opening, initializing, or working in ANY project workspace:
    - `.gitignore`
    - `.gitattributes`
 2. **Automatic Self-Scaffolding (Zero-Human-Intervention)**: If ANY of these guardrails are missing, you MUST automatically run:
-   `powershell -ExecutionPolicy Bypass -File "C:\Users\ffram\.gemini\templates\init-guardrails.ps1"`
-   or copy them from `C:\Users\ffram\.gemini\templates\project-guardrails\` on Step 1 BEFORE writing any project feature code. You are FORBIDDEN from waiting for the human to ask or remind you to install guardrails. Every project must be born with S-Tier guardrails.
+   `powershell -ExecutionPolicy Bypass -File "~/.gemini\templates\init-guardrails.ps1"`
+   or copy them from `~/.gemini\templates\project-guardrails\` on Step 1 BEFORE writing any project feature code. You are FORBIDDEN from waiting for the human to ask or remind you to install guardrails. Every project must be born with S-Tier guardrails.
 
 ### 0.2 Executive Bypass Protocol (Lead / Client Override)
 - **Absolute Priority of Human Lead**: If the human user explicitly prefixes any instruction or task with `"LEAD ORDER:"` or `"ตามสั่ง LEAD:"`:
@@ -38,7 +40,7 @@ Whenever opening, initializing, or working in ANY project workspace:
 Whenever executing tasks, you MUST use the `godkiller-mcp` tools for orchestration and verification:
 - **Planning Phase**: Prior to making any code modifications or edits, run `gk_phase` with the action `assert`, and validate your approach using `gk_meta` with the action `plan_validate`.
 - **Verification Phase**: Before claiming a task is done, run verification checks (such as tests or verification commands) using `gk_verify` with the action `bundle`, and then call `gk_phase` with the action `claim_done`.
-- **Guidelines**: Follow the workflow best practices in `C:\Users\ffram\.gemini\antigravity\mcp\godkiller-mcp\instructions.md`.
+- **Guidelines**: Follow the workflow best practices in `~/.gemini\antigravity\mcp\godkiller-mcp\instructions.md`.
 
 ### Strict Operational Protocol for MCP Servers
 You operate as an Enterprise Solution Architect & Principal DevSecOps team. You MUST select and run MCP tools according to the following strict mapping:
@@ -77,17 +79,17 @@ Whenever working on backend development, secure code review, database design, AP
 ## 3. Frontend Design & Craft Guidelines (Impeccable, Gridgeist, Hallmark & Human Dashboard)
 Whenever working on frontend development, UI/UX design, responsive layouts, web styling, page layouts, components, dashboards, or UI reviews/audits:
 - **Use Frontend Design Skills**: You MUST actively invoke, reference, and adhere to the guidelines in:
-  - `human-dashboard-design`: Located at `C:\Users\ffram\.gemini\config\skills\human-dashboard-design/` for enterprise admin & BI dashboards based on `next-shadcn-admin-dashboard` (19 domain archetypes, unified hairline grids, colocation architecture).
-  - `ui-uniqueness-audit`: Located at `C:\Users\ffram\.gemini\config\skills\ui-uniqueness-audit/` for the 4 quantitative human-vs-AI design metrics, 60-30-10 spacing rules, and `<ui_audit>` self-evaluations.
-  - `ui-aesthetics-composition`: Located at `C:\Users\ffram\.gemini\config\skills\ui-aesthetics-composition/` for 60-30-10 color harmony, nested border-radius hierarchy, and 70/30 asymmetric focal layouts.
-  - `visual-integrity-parity`: Located at `C:\Users\ffram\.gemini\config\skills\visual-integrity-parity/` for anti-flicker fixed bounding boxes, zero layout thrashing, and Mermaid diagram-to-code parity.
-  - `frontend-ui-engineering`: Located at `C:\Users\ffram\.gemini\config\skills\frontend-ui-engineering/` for production component architecture, accessibility (WCAG), and responsive layouts.
-  - `functional-ui-locking`: Located at `C:\Users\ffram\.gemini\config\skills\functional-ui-locking/` for zero-orphan UI enforcement, explicit event handler wiring, and interaction TDD testing.
-  - `impeccable`: Located at `C:\Users\ffram\.gemini\config\skills\impeccable/` for professional interface audits, critiques, and craftsmanship.
-  - `gridgeist`: Located at `C:\Users\ffram\.gemini\config\skills\gridgeist/` for layout composition, grid alignment, typography hierarchy, and avoiding generic SaaS templates.
-  - `hallmark`: Located at `C:\Users\ffram\.gemini\config\skills\hallmark/` for anti-AI-slop design structures, auditing, redesigning, and design extraction from URLs/screenshots.
+  - `human-dashboard-design`: Located at `~/.gemini\config\skills\human-dashboard-design/` for enterprise admin & BI dashboards based on `next-shadcn-admin-dashboard` (19 domain archetypes, unified hairline grids, colocation architecture).
+  - `ui-uniqueness-audit`: Located at `~/.gemini\config\skills\ui-uniqueness-audit/` for the 4 quantitative human-vs-AI design metrics, 60-30-10 spacing rules, and `<ui_audit>` self-evaluations.
+  - `ui-aesthetics-composition`: Located at `~/.gemini\config\skills\ui-aesthetics-composition/` for 60-30-10 color harmony, nested border-radius hierarchy, and 70/30 asymmetric focal layouts.
+  - `visual-integrity-parity`: Located at `~/.gemini\config\skills\visual-integrity-parity/` for anti-flicker fixed bounding boxes, zero layout thrashing, and Mermaid diagram-to-code parity.
+  - `frontend-ui-engineering`: Located at `~/.gemini\config\skills\frontend-ui-engineering/` for production component architecture, accessibility (WCAG), and responsive layouts.
+  - `functional-ui-locking`: Located at `~/.gemini\config\skills\functional-ui-locking/` for zero-orphan UI enforcement, explicit event handler wiring, and interaction TDD testing.
+  - `impeccable`: Located at `~/.gemini\config\skills\impeccable/` for professional interface audits, critiques, and craftsmanship.
+  - `gridgeist`: Located at `~/.gemini\config\skills\gridgeist/` for layout composition, grid alignment, typography hierarchy, and avoiding generic SaaS templates.
+  - `hallmark`: Located at `~/.gemini\config\skills\hallmark/` for anti-AI-slop design structures, auditing, redesigning, and design extraction from URLs/screenshots.
 - **Reference Repositories (Mandatory Design Baselines)**:
-  - Clone/Reference: `C:\Users\ffram\security_repos\next-shadcn-admin-dashboard` (Next.js 16 + Tailwind CSS v4 + Shadcn UI) and `C:\Users\ffram\security_repos\shadcndashboard` (React + Vite + Recharts + TanStack Table). Extract exact tokens, spacing, and layouts directly from these repos instead of generating UI from imagination.
+  - Clone/Reference: `~/security_repos\next-shadcn-admin-dashboard` (Next.js 16 + Tailwind CSS v4 + Shadcn UI) and `~/security_repos\shadcndashboard` (React + Vite + Recharts + TanStack Table). Extract exact tokens, spacing, and layouts directly from these repos instead of generating UI from imagination.
 - **Core Design Principles**:
   - **Avoid AI Slop**: No floating cards with heavy `shadow-2xl`, no `rounded-3xl`, no bright purple/blue gradient backgrounds, no unformatted giant numbers, and no high-contrast solid neon badge pills.
   - **Unified Container Grid**: Group related metric cards into a single container (`overflow-hidden rounded-xl bg-card ring-1 ring-foreground/10`) with internal hairline borders (`border-foreground/10`).
@@ -144,7 +146,7 @@ Before submitting any frontend component, execute a self-audit loop inside `<ui_
 
 ## 4. AI Prompt Engineering & Prompt Generation (Prompt-Master)
 Whenever the user asks you to write, fix, improve, or adapt a prompt for any AI tool, or when formulating prompt strategies:
-- **Use the Prompt-Master Skill**: You MUST actively invoke, reference, and adhere to the guidelines in the `prompt-master` skill located at `C:\Users\ffram\.gemini\config\skills\prompt-master/`.
+- **Use the Prompt-Master Skill**: You MUST actively invoke, reference, and adhere to the guidelines in the `prompt-master` skill located at `~/.gemini\config\skills\prompt-master/`.
 - **Identity & Role**: Operate as a professional prompt engineer. Extract the user's intent, identify the target tool, and output a single production-ready prompt optimized for that specific tool with zero wasted tokens.
 - **Constraints**:
   - Do not output a prompt without first confirming the target tool (ask if ambiguous).
@@ -192,7 +194,7 @@ To prevent unnatural, robotic, and stiff responses, the model is **ABSOLUTELY FO
    - **Trigger ที่ต้องเปิดโหมดนี้ทันที 100%**: เมื่อคำสั่งมีคำหรือบริบทต่อไปนี้:
      - งานเอกสารสรุป: *"เขียนสรุป"*, *"สรุปงาน"*, *"Summary"*, *"เขียนรายงาน"*, *"รายงานผล"*, *"Report"*, *"เขียนรีวิว"*, *"รีวิวงาน"*, *"Review"*
      - งานพูดคุย/สื่อสารกับคนในทีม: *"นำเสนอ"*, *"พรีเซนต์"*, *"สคริปต์"*, *"บทพูด"*, *"คุยกับ Lead"*, *"บอก Lead"*, *"ถาม Lead"*, *"คุยกับพี่..."*, *"คุยกับ PO"*, *"คุยกับ Frontend"*, *"สื่อสารกับทีม"*, *"Daily Standup"*, *"Sync"*, *"ส่ง Slack/Teams"*
-   - **การเตรียมตัวก่อนตอบ**: กด `view_file` อ่าน `user-persona` (`C:\Users\ffram\.gemini\config\skills\user-persona\SKILL.md`) **อ่านทั้งหมดจนจบครบทุกบรรทัด (บรรทัด 1–386 ห้ามอ่านตัดแค่ช่วงต้นหรือครึ่งเดียวเด็ดขาด)**
+   - **การเตรียมตัวก่อนตอบ**: กด `view_file` อ่าน `user-persona` (`~/.gemini\config\skills\user-persona\SKILL.md`) **อ่านทั้งหมดจนจบครบทุกบรรทัด (บรรทัด 1–386 ห้ามอ่านตัดแค่ช่วงต้นหรือครึ่งเดียวเด็ดขาด)**
    - **ตัดกฎ `i-have-adhd` และตัดนิสัย AI Assistant ออก 100%**:
      - ห้ามใส่ `สถานะความคืบหน้า: Step X of Y`, ห้ามใส่ `Next Action (ทำได้ใน 1 นาที)`, ห้ามซอยบูลเล็ตหุ่นยนต์, ห้ามใส่ป้ายกำกับ
      - ห้ามทำสไลด์ / ห้ามทำฟอร์ม Presentation ทางการ / ห้ามใส่อีโมจิเด็ดขาด (Zero Unicode Emojis เช่น 🎙️, 📌, ✅, ❓)
@@ -212,7 +214,7 @@ To prevent **over-governance** on trivial fixes while enforcing strict **Product
   - **Pipeline**: **Lightweight Execution**. Skip `solution-brainstorm`, `workflow-designer`, `spec-driven-development`, and heavy architecture ceremonies. Apply the minimal change (`code-simplification`), run a quick build/test verification (`npm run build` or targeted test), and reply.
 - **`MEDIUM` (Feature / API Endpoint / Service Module / DB Query)**:
   - **Pipeline**: **Spec -> Incremental + TDD -> Production Guardrails -> Security Scan -> Adversarial Review ("Break This Code") -> Code Quality & Diff Review -> Build + dist/ Verification**.
-    1. **Before Planning**: Read `user-persona` (`C:\Users\ffram\.gemini\config\skills\user-persona\SKILL.md`, entire file from start to finish, all 379 lines) alongside `planning-and-task-breakdown` and `spec-driven-development` (if UI is involved, read `frontend-ui-engineering` and `impeccable`/`gridgeist`/`hallmark`).
+    1. **Before Planning**: Read `user-persona` (`~/.gemini\config\skills\user-persona\SKILL.md`, entire file from start to finish, all 379 lines) alongside `planning-and-task-breakdown` and `spec-driven-development` (if UI is involved, read `frontend-ui-engineering` and `impeccable`/`gridgeist`/`hallmark`).
     2. **During Implementation**: Use `incremental-implementation` + `test-driven-development` alongside `node-best-practices` and `clean-architecture` (enforcing the 5 Production Guardrails: `dist/` path alias & bundle verification, Docker/Cloud Run Job CLI preservation, dynamic `PORT` & single shutdown hook, and transactional outbox safety).
     3. **Adversarial & Quality Verification**: Run `vulnerability-scanner` (Semgrep) / `security-bandit`, execute the **28-Point Adversarial Review ("Break This Code" Red-Team Matrix)** in Section 7.4 alongside `git-local-reviewer`, cross-check concurrency and contracts with `race-condition-audit` and `runtime-contract-mismatch`, fix any discovered edge-case/race-condition flaws, and verify compiled runtime artifacts (`npm run build` + `dist/` check).
 - **`HIGH` (System Architecture / Multi-Service Refactor / DB Migration / Docker & Cloud Run Deploy)**:
@@ -396,7 +398,7 @@ To guarantee zero-defect delivery in production systems, every implementation mu
 - **Instant Emergency Recovery Playbook**:
   1. `git reset --hard HEAD` (discard uncommitted damage in <1s)
   2. `git clean -fd` (delete untracked accidental files)
-  3. `tar -xzf "C:\Users\ffram\project_backups\<project>\<file>.tar.gz" -C .` (restore from offline snapshot)
+  3. `tar -xzf "~/project_backups\<project>\<file>.tar.gz" -C .` (restore from offline snapshot)
 - **Background Auto-Commit & Snapshot**: Keep `watch-autocommit.ps1` running in the background and execute `powershell -ExecutionPolicy Bypass -File .\backup-project.ps1` before high-risk refactors.
 
 

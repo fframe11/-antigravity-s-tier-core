@@ -34,12 +34,19 @@ fi
 echo "[4/6] Installing Global Rules (GEMINI.md & AGENTS.md)..."
 if [ -d "$SCRIPT_DIR/rules" ]; then
     if [ -f "$SCRIPT_DIR/rules/GEMINI.md" ]; then
-        sed -e "s|C:\\\\Users\\\\ffram|$USER_HOME|g" \
+        sed -e "s|~/.gemini|$GEMINI_DIR|g" \
+            -e "s|~/security_repos|$USER_HOME/security_repos|g" \
+            -e "s|C:\\\\Users\\\\ffram|$USER_HOME|g" \
             -e "s|C:/Users/ffram|$USER_HOME|g" \
-            -e "s|c:/Users/ffram|$USER_HOME|g" \
             "$SCRIPT_DIR/rules/GEMINI.md" > "$GEMINI_DIR/GEMINI.md"
     fi
-    [ -f "$SCRIPT_DIR/rules/AGENTS.md" ] && cp "$SCRIPT_DIR/rules/AGENTS.md" "$GEMINI_DIR/"
+    if [ -f "$SCRIPT_DIR/rules/AGENTS.md" ]; then
+        sed -e "s|~/.gemini|$GEMINI_DIR|g" \
+            -e "s|~/security_repos|$USER_HOME/security_repos|g" \
+            -e "s|C:\\\\Users\\\\ffram|$USER_HOME|g" \
+            -e "s|C:/Users/ffram|$USER_HOME|g" \
+            "$SCRIPT_DIR/rules/AGENTS.md" > "$GEMINI_DIR/AGENTS.md"
+    fi
     echo "  -> Rules synced to $GEMINI_DIR (with user path auto-adapted)"
 fi
 

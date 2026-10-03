@@ -36,7 +36,7 @@ This skill provides actionable security checklists and references to real attack
 
 ## Attack Payload Reference (from PayloadsAllTheThings repo)
 
-When performing Adversarial Review, reference these payload categories at `C:\Users\ffram\security_repos\PayloadsAllTheThings\` to test defenses:
+When performing Adversarial Review, reference these payload categories at `~/security_repos\PayloadsAllTheThings\` to test defenses:
 
 ### Most Relevant for NestJS + PostgreSQL APIs
 | Attack Category | Folder | What to Check |
@@ -73,6 +73,6 @@ When performing Adversarial Review, reference these payload categories at `C:\Us
 4. If any defense is missing, flag it as a vulnerability before claiming the task done.
 
 ## Full Repo Paths
-- API Security Checklist: `C:\Users\ffram\security_repos\API-Security-Checklist`
-- OWASP CheatSheetSeries: `C:\Users\ffram\security_repos\CheatSheetSeries`
-- PayloadsAllTheThings: `C:\Users\ffram\security_repos\PayloadsAllTheThings`
+- API Security Checklist: `~/security_repos\API-Security-Checklist`
+- OWASP CheatSheetSeries: `~/security_repos\CheatSheetSeries`
+- PayloadsAllTheThings: `~/security_repos\PayloadsAllTheThings`

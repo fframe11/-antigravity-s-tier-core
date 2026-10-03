@@ -4,7 +4,7 @@ description: Use when writing Node.js / TypeScript / NestJS / Express backend se
 ---
 # Node.js / TypeScript / NestJS Production Engineering Guardrails
 
-This skill provides strict production-grade coding guardrails for Node.js, TypeScript, NestJS, Express, and Prisma services, in addition to referencing local guides at `C:\Users\ffram\security_repos\nodebestpractices`.
+This skill provides strict production-grade coding guardrails for Node.js, TypeScript, NestJS, Express, and Prisma services, in addition to referencing local guides at `~/security_repos\nodebestpractices`.
 
 Whenever writing or modifying Node.js / TypeScript backend code, you MUST enforce these **5 Production-Grade Coding Guardrails** before claiming completion:
 
