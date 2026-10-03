@@ -1,0 +1,13 @@
+[
+  {
+    "id": 1,
+    "project_id": "backend_itim_tech",
+    "task_id": "sprint-1-auth-api-fix",
+    "content": "Always verify external identity tokens (e.g. Google Identity Platform / Firebase) on the backend rather than trusting raw body parameters (email, uid, password). Never include phantom DTO fields that are unused. Never extract user identity via unverified custom headers like x-user-id in controllers. Always use centralized resolveUserId() with signature and expiration checks. Ensure CORS and fail-fast environment secrets.",
+    "tags": "",
+    "evidence_ids": "",
+    "task_passed": 1,
+    "tier": "semantic",
+    "verified": 0
+  }
+]

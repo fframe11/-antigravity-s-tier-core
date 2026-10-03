@@ -107,11 +107,23 @@ if (-not $SkipMcp) {
     }
 }
 
+# 6. Install Lessons & Postmortems DB
+Write-Host "`n[7/7] Installing Epistemic Lessons & Incident Postmortems..." -ForegroundColor Yellow
+$godkillerDir = Join-Path $geminiDir "godkiller_data"
+New-Item -ItemType Directory -Path $godkillerDir -Force | Out-Null
+$srcLessonsDb = Join-Path $repoRoot "lessons\lessons.db"
+if (Test-Path $srcLessonsDb) {
+    Copy-Item -Path $srcLessonsDb -Destination "$godkillerDir\lessons.db" -Force
+    Write-Host "  -> Epistemic lessons database synced to $godkillerDir\lessons.db" -ForegroundColor Green
+}
+
 Write-Host "`n==========================================================" -ForegroundColor Green
 Write-Host "  INSTALLATION COMPLETE! ANTIGRAVITY IS NOW S-TIER READY   " -ForegroundColor Green
 Write-Host "==========================================================" -ForegroundColor Green
 Write-Host "What's now active:" -ForegroundColor Cyan
 Write-Host "  [+] 98+ Production Skills (Frontend 5-Source, Stitch, OWASP, FastMCP, etc.)"
+Write-Host "  [+] User Persona (Senior Dev Voice, Cognitive Thinking Reference & Archive)"
+Write-Host "  [+] API Incident Lessons (lessons.db, sprint-1-auth-api-fix, BOLA/BFLA guards)"
 Write-Host "  [+] Enterprise Guardrails (Mermaid Parity, AI-Slop Audits, Boundary Checks)"
 Write-Host "  [+] Global Persona & Anti-AI Template Rules (GEMINI.md / AGENTS.md)"
 Write-Host "  [+] Complete MCP Server Mesh (Godkiller, Notion, Canva, Semgrep, Playwright, etc.)"

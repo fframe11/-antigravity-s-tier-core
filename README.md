@@ -50,6 +50,12 @@ antigravity-s-tier-core/
 ├── rules/                      # Global Cognitive Invariants & Rules
 │   ├── GEMINI.md               # S-Tier Master Rules (Godkiller orchestration, UI invariants)
 │   └── AGENTS.md               # Execution guidelines and invariant constraints
+├── docs/                       # Definitive Technical & Cognitive Manuals
+│   ├── API_MISTAKES_AND_LESSONS.md # Fatal API mistakes, real postmortems & defense patterns
+│   └── COGNITIVE_PERSONA_ARCHITECTURE.md # 3-layer cognitive thinking reference & preview
+├── lessons/                    # Epistemic Postmortems Database
+│   ├── lessons.db              # Godkiller memory SQLite database
+│   └── lessons.json            # Human-readable export of validated architectural lessons
 ├── templates/                  # Automated Project Guardrails (Self-Scaffolding)
 │   ├── init-guardrails.ps1     # 1-click project onboarding guardrail injector
 │   └── project-guardrails/     # Injected into every new/existing workspace

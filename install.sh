@@ -64,6 +64,14 @@ if [ -f "$TEMPLATE_FILE" ]; then
     echo "  -> Generated $TARGET_MCP_CONFIG"
 fi
 
+echo "[7/7] Installing Epistemic Lessons & Incident Postmortems..."
+GODKILLER_DIR="$GEMINI_DIR/godkiller_data"
+mkdir -p "$GODKILLER_DIR"
+if [ -f "$SCRIPT_DIR/lessons/lessons.db" ]; then
+    cp "$SCRIPT_DIR/lessons/lessons.db" "$GODKILLER_DIR/lessons.db"
+    echo "  -> Epistemic lessons database synced to $GODKILLER_DIR/lessons.db"
+fi
+
 echo "=========================================================="
 echo "  INSTALLATION COMPLETE! ANTIGRAVITY IS S-TIER READY      "
 echo "=========================================================="
