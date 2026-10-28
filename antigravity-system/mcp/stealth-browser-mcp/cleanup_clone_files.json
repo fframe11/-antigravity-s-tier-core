@@ -1,0 +1,1 @@
+{"name":"cleanup_clone_files","description":"Clean up old clone files to save disk space.\n\nArgs:\n    max_age_hours (int): Maximum age in hours for files to keep.\n\nReturns:\n    Dict[str, int]: Number of files deleted.","parameters":{"properties":{"max_age_hours":{"default":24,"title":"Max Age Hours","type":"integer"}},"type":"object"}}

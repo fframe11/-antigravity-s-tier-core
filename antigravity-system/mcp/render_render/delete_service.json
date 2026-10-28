@@ -1,0 +1,1 @@
+{"name":"delete_service","description":"Delete a service","parameters":{"additionalProperties":false,"properties":{"params":{"additionalProperties":false,"properties":{"serviceId":{"description":"The ID of the service to delete","type":"string"}},"required":["serviceId"],"type":"object"}},"required":["params"],"type":"object"}}

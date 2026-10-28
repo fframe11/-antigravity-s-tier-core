@@ -1,0 +1,1 @@
+{"name":"get_service","description":"Get details of a specific service","parameters":{"additionalProperties":false,"properties":{"params":{"additionalProperties":false,"properties":{"serviceId":{"description":"The ID of the service to retrieve","type":"string"}},"required":["serviceId"],"type":"object"}},"required":["params"],"type":"object"}}

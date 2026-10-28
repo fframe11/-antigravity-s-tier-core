@@ -1,0 +1,1 @@
+{"name":"list_stored_elements","description":"List all stored elements with their basic info.\n\nReturns:\n    Dict[str, Any]: List of stored elements with metadata.","parameters":{"properties":{},"type":"object"}}

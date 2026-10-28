@@ -1,0 +1,1 @@
+{"name":"clear_debug_view","description":"Clear all debug logs and statistics with timeout protection.\n\nReturns:\n    bool: True if cleared successfully.","parameters":{"properties":{},"type":"object"}}

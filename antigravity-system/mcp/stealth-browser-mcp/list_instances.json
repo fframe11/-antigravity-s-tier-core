@@ -1,0 +1,1 @@
+{"name":"list_instances","description":"List all active browser instances.\n\nReturns:\n    List[Dict[str, Any]]: List of browser instances with their current state.","parameters":{"properties":{},"type":"object"}}

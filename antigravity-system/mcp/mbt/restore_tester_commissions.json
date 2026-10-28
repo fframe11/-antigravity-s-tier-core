@@ -1,0 +1,1 @@
+{"name":"restore_tester_commissions","description":"Recover an interrupted MBT commission transaction after MT5 is closed.\n\nOnly restores the configured terminal's exact journalled prior profile;\nrefuses external edits. Other launches stay blocked until recovery succeeds.\n","parameters":{"properties":{},"title":"restore_tester_commissionsArguments","type":"object"}}

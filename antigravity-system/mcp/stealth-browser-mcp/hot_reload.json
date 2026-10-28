@@ -1,0 +1,1 @@
+{"name":"hot_reload","description":"Hot reload all modules without restarting the server.\n\nReloading replaces the browser manager and network interceptor, so it is\nrefused while browser instances are open to avoid orphaning them.\n\nReturns:\n    str: Status message.","parameters":{"properties":{},"type":"object"}}

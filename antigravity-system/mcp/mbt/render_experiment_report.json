@@ -1,0 +1,1 @@
+{"name":"render_experiment_report","description":"Create one offline HTML report from saved MT5 optimization evidence.","parameters":{"properties":{"run_id":{"title":"Run Id","type":"string"}},"required":["run_id"],"title":"render_experiment_reportArguments","type":"object"}}

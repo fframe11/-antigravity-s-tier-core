@@ -7,7 +7,8 @@
         "import asyncio; from godkiller_mcp.server import app; asyncio.run(app.run_stdio_async())"
       ],
       "env": {
-        "GODKILLER_STRICT_MODE": "true"
+        "GODKILLER_STRICT_MODE": "true",
+        "PYTHONPATH": "{{USER_HOME}}/.gemini/mcp-servers"
       }
     },
     "python-debugger": {

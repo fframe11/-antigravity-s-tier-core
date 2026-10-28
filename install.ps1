@@ -89,6 +89,15 @@ if (-not $SkipMcp) {
         Write-Host "  -> Custom MCP servers copied to $mcpDir" -ForegroundColor Green
     }
 
+    # Ensure FastMCP dependency is installed for custom Python servers (Godkiller, Bandit, etc.)
+    if (Get-Command python -ErrorAction SilentlyContinue) {
+        python -c "import mcp" 2>$null
+        if ($LASTEXITCODE -ne 0) {
+            Write-Host "  -> Installing Python 'mcp' dependency for custom MCP servers..." -ForegroundColor Cyan
+            pip install mcp --quiet
+        }
+    }
+
     $templateFile = Join-Path $repoRoot "mcp\mcp_config.template.json"
     $targetMcpConfig = Join-Path $configDir "mcp_config.json"
 
@@ -137,7 +146,7 @@ New-Item -ItemType Directory -Path $agSystemDir -Force | Out-Null
 $srcAgSystem = Join-Path $repoRoot "antigravity-system"
 if (Test-Path $srcAgSystem) {
     Copy-Item -Path "$srcAgSystem\*" -Destination $agSystemDir -Recurse -Force
-    Write-Host "  -> Antigravity MCP tool schemas (33 tool suites) & builtin skills deployed to $agSystemDir" -ForegroundColor Green
+    Write-Host "  -> Antigravity MCP tool schemas (46 tool suites) & builtin skills deployed to $agSystemDir" -ForegroundColor Green
 }
 
 Write-Host "`n==========================================================" -ForegroundColor Green
@@ -146,7 +155,7 @@ Write-Host "==========================================================" -Foregro
 Write-Host "What's now active:" -ForegroundColor Cyan
 Write-Host "  [+] 153+ Production Skills (Frontend 5-Source, Stitch, OWASP, SecuritySkills, Semgrep, etc.)"
 Write-Host "  [+] 4 Native Antigravity Built-in Skills (agy-customizations, generative_ui, etc.)"
-Write-Host "  [+] 33 MCP Tool Schema Suites (Godkiller, Canva, Notion, Playwright, Semgrep, etc.)"
+Write-Host "  [+] 46 MCP Tool Schema Suites (Godkiller, Canva, Notion, Playwright, Semgrep, etc.)"
 Write-Host "  [+] 4-Layer Git Push Safety Policy (git-push-policy.md)"
 Write-Host "  [+] User Persona (Senior Dev Voice, Cognitive Thinking Reference & Archive)"
 Write-Host "  [+] API Incident Lessons (lessons.db, sprint-1-auth-api-fix, BOLA/BFLA guards)"

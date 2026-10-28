@@ -1,0 +1,1 @@
+{"name":"close_instance","description":"Close a browser instance.\n\nArgs:\n    instance_id (str): Browser instance ID.\n\nReturns:\n    bool: True if closed successfully.","parameters":{"properties":{"instance_id":{"title":"Instance Id","type":"string"}},"required":["instance_id"],"type":"object"}}

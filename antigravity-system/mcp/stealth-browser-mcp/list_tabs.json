@@ -1,0 +1,1 @@
+{"name":"list_tabs","description":"List all tabs for a browser instance.\n\nArgs:\n    instance_id (str): Browser instance ID.\n\nReturns:\n    List[Dict[str, str]]: List of tabs with their details.","parameters":{"properties":{"instance_id":{"title":"Instance Id","type":"string"}},"required":["instance_id"],"type":"object"}}

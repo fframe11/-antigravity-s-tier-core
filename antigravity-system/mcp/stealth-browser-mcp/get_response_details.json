@@ -1,0 +1,1 @@
+{"name":"get_response_details","description":"Get response details for a network request.\n\nArgs:\n    request_id (str): Network request ID.\n\nReturns:\n    Optional[Dict[str, Any]]: Response details including status, headers, and metadata.","parameters":{"properties":{"request_id":{"title":"Request Id","type":"string"}},"required":["request_id"],"type":"object"}}

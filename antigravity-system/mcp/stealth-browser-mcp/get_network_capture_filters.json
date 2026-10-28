@@ -1,0 +1,1 @@
+{"name":"get_network_capture_filters","description":"Get current network capture filters.\n\nArgs:\n    instance_id (str): Browser instance ID.\n\nReturns:\n    Dict[str, List[str]]: Current filters with 'include' and 'exclude' lists.","parameters":{"properties":{"instance_id":{"title":"Instance Id","type":"string"}},"required":["instance_id"],"type":"object"}}

@@ -1,0 +1,1 @@
+{"name":"get_hook_documentation","description":"Get comprehensive documentation for creating hook functions (AI learning).\n\nReturns:\n    Dict[str, Any]: Documentation of request object structure and HookAction types","parameters":{"properties":{},"type":"object"}}

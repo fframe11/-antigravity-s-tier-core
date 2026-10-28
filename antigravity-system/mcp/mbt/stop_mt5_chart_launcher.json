@@ -1,0 +1,1 @@
+{"name":"stop_mt5_chart_launcher","description":"Stop the local report-button bridge, leaving MT5 and open charts untouched.","parameters":{"properties":{},"title":"stop_mt5_chart_launcherArguments","type":"object"}}

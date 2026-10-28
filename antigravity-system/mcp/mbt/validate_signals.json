@@ -1,0 +1,1 @@
+{"name":"validate_signals","description":"\nSanity-check the signal file: count rows, flag any with bad SL/TP geometry\n(e.g. a LONG whose TP is below entry, or SL above entry). Strategy-agnostic.\n","parameters":{"properties":{},"title":"validate_signalsArguments","type":"object"}}

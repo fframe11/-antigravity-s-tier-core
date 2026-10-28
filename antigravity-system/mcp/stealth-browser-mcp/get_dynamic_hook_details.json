@@ -1,0 +1,1 @@
+{"name":"get_dynamic_hook_details","description":"Get detailed information about a specific dynamic hook.\n\nArgs:\n    hook_id (str): Hook identifier\n    \nReturns:\n    Dict[str, Any]: Detailed hook information including function code","parameters":{"properties":{"hook_id":{"title":"Hook Id","type":"string"}},"required":["hook_id"],"type":"object"}}

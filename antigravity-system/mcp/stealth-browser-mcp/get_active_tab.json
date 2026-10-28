@@ -1,0 +1,1 @@
+{"name":"get_active_tab","description":"Get information about the currently active tab.\n\nArgs:\n    instance_id (str): Browser instance ID.\n\nReturns:\n    Dict[str, Any]: Active tab information.","parameters":{"properties":{"instance_id":{"title":"Instance Id","type":"string"}},"required":["instance_id"],"type":"object"}}

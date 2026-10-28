@@ -1,0 +1,1 @@
+{"name":"clear_all_elements","description":"Clear all stored elements.\n\nReturns:\n    Dict[str, Any]: Success message.","parameters":{"properties":{},"type":"object"}}

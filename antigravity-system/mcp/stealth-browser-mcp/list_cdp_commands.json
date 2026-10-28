@@ -1,0 +1,1 @@
+{"name":"list_cdp_commands","description":"List all available CDP Runtime commands for function execution.\n\nReturns:\n    List[str]: List of available CDP command names.","parameters":{"properties":{},"type":"object"}}

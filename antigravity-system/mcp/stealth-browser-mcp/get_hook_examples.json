@@ -1,0 +1,1 @@
+{"name":"get_hook_examples","description":"Get example hook functions for AI learning.\n\nReturns:\n    Dict[str, Any]: Collection of example hook functions with explanations","parameters":{"properties":{},"type":"object"}}

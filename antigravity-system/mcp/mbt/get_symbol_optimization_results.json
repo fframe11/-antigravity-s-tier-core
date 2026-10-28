@@ -1,0 +1,1 @@
+{"name":"get_symbol_optimization_results","description":"Read statuses and child run IDs for all markets in a saved batch.","parameters":{"properties":{"batch_id":{"title":"Batch Id","type":"string"}},"required":["batch_id"],"title":"get_symbol_optimization_resultsArguments","type":"object"}}

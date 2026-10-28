@@ -1,0 +1,1 @@
+{"name":"typecheck","description":"Typecheck the project (incremental tsc on the project VM). Type errors don't block the app from running.","parameters":{"$schema":"http://json-schema.org/draft-07/schema#","additionalProperties":false,"properties":{"paths":{"items":{"type":"string"},"type":"array"},"projectId":{"type":"string"}},"required":["projectId"],"type":"object"}}

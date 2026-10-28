@@ -1,0 +1,1 @@
+{"name":"ping","description":"Check whether the MT5 terminal is running and reachable. Use this first\nif any other tool returns an error, to confirm the connection is alive.","parameters":{"properties":{},"title":"pingArguments","type":"object"}}

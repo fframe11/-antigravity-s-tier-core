@@ -1,0 +1,1 @@
+{"name":"validate_browser_environment_tool","description":"Validate browser environment and diagnose potential issues.\n\nReturns:\n    Dict[str, Any]: Environment validation results with platform info and recommendations","parameters":{"properties":{},"type":"object"}}

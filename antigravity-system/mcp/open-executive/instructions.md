@@ -1,0 +1,5 @@
+Open Executive as an MCP server: a company's executive context and a council of specialist analysts, answered as the person signed in.
+
+Resources (read-only): the company profile, today's briefing and recent activity, the people roster, department state, and episodic memory (past decisions, initiatives, advice). Recent activity and episodic memory are the owner's alone; the briefing and roster need someone on the roster.
+
+Tools: `consult_specialist` (domain analysis from one specialist, grounded in company knowledge), `search_knowledge` (retrieval over the curated business knowledge base and company documents), `list_workflows` (the catalog of multi-step executive workflows), and `ask_executive` (one synthesized answer from the Executive). None of them sends, posts, books or changes anything, except `ask_executive` when this server allows it to act: then it makes changes inside Open Executive and leaves messages and meetings on cards the person approves (or that go on their own under their Handle it for me).

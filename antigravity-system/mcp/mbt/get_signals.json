@@ -1,0 +1,1 @@
+{"name":"get_signals","description":"\nRead the signals your indicator logged (the file named in config.yaml).\nThese are the indicator's own decisions — not recalculated in Python.\nsince_date: optional 'YYYY-MM-DD' filter.\n","parameters":{"properties":{"since_date":{"default":null,"title":"Since Date","type":"string"}},"title":"get_signalsArguments","type":"object"}}

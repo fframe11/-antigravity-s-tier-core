@@ -1,0 +1,1 @@
+{"name":"get_request_details","description":"Get detailed information about a network request.\n\nArgs:\n    request_id (str): Network request ID.\n\nReturns:\n    Optional[Dict[str, Any]]: Request details including headers, cookies, and body.","parameters":{"properties":{"request_id":{"title":"Request Id","type":"string"}},"required":["request_id"],"type":"object"}}

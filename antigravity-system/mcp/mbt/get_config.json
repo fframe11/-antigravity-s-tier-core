@@ -1,0 +1,1 @@
+{"name":"get_config","description":"Show the active MBT configuration (which terminal and signal file are in use).\nNote: the output includes local file paths — do not share it publicly.","parameters":{"properties":{},"title":"get_configArguments","type":"object"}}

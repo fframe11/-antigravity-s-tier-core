@@ -1,0 +1,1 @@
+{"name":"list_clone_files","description":"List all element clone files saved to disk.\n\nReturns:\n    List[Dict[str, Any]]: List of clone files with metadata and file information.","parameters":{"properties":{},"type":"object"}}

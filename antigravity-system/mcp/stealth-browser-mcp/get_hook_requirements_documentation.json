@@ -1,0 +1,1 @@
+{"name":"get_hook_requirements_documentation","description":"Get documentation on hook requirements and matching criteria.\n\nReturns:\n    Dict[str, Any]: Requirements documentation and best practices","parameters":{"properties":{},"type":"object"}}

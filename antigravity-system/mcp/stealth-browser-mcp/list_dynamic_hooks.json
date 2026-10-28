@@ -1,0 +1,1 @@
+{"name":"list_dynamic_hooks","description":"List all dynamic hooks.\n\nArgs:\n    instance_id (Optional[str]): Optional filter by browser instance\n    \nReturns:\n    Dict[str, Any]: List of hooks with details and statistics","parameters":{"properties":{"instance_id":{"anyOf":[{"type":"string"},{"type":"null"}],"default":null,"title":"Instance Id"}},"type":"object"}}

@@ -1,0 +1,1 @@
+{"name":"list_workflows","description":"List the available multi-step executive workflows and their input schemas.\n\nReturns a JSON array of workflow metadata (name, title, description,\nestimated minutes, input schema, steps). Workflows are run from Open\nExecutive itself, not over MCP.\n","parameters":{"properties":{},"title":"list_workflowsArguments","type":"object"}}

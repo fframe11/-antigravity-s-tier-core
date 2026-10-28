@@ -1,0 +1,1 @@
+{"name":"get_hook_common_patterns","description":"Get common hook patterns and use cases.\n\nReturns:\n    Dict[str, Any]: Common patterns like ad blocking, API proxying, etc.","parameters":{"properties":{},"type":"object"}}

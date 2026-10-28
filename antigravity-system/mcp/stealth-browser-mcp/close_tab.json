@@ -1,0 +1,1 @@
+{"name":"close_tab","description":"Close a specific tab.\n\nArgs:\n    instance_id (str): Browser instance ID.\n    tab_id (str): Tab ID to close.\n\nReturns:\n    bool: True if closed successfully.","parameters":{"properties":{"instance_id":{"title":"Instance Id","type":"string"},"tab_id":{"title":"Tab Id","type":"string"}},"required":["instance_id","tab_id"],"type":"object"}}

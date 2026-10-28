@@ -1,0 +1,1 @@
+{"name":"remove_dynamic_hook","description":"Remove a dynamic hook.\n\nArgs:\n    hook_id (str): Hook identifier to remove\n    \nReturns:\n    Dict[str, Any]: Removal status","parameters":{"properties":{"hook_id":{"title":"Hook Id","type":"string"}},"required":["hook_id"],"type":"object"}}

@@ -1,0 +1,1 @@
+{"name":"get_debug_lock_status","description":"Get current debug logger lock status for debugging hanging exports.\n\nReturns:\n    Dict[str, Any]: Lock status information.","parameters":{"properties":{},"type":"object"}}

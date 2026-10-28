@@ -1,0 +1,1 @@
+{"name":"render_symbol_optimization_report","description":"Render an offline dark per-market comparison with individual experiment links.","parameters":{"properties":{"batch_id":{"title":"Batch Id","type":"string"}},"required":["batch_id"],"title":"render_symbol_optimization_reportArguments","type":"object"}}

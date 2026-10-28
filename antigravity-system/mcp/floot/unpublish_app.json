@@ -1,0 +1,1 @@
+{"name":"unpublish_app","description":"Take the published app offline and release its subdomain — destructive, confirm with the user first. Details: get_guides('publishing').","parameters":{"$schema":"http://json-schema.org/draft-07/schema#","additionalProperties":false,"properties":{"projectId":{"type":"string"}},"required":["projectId"],"type":"object"}}

@@ -1,0 +1,1 @@
+{"name":"clear_stored_element","description":"Clear a specific stored element.\n\nArgs:\n    element_id (str): Element ID to clear.\n\nReturns:\n    Dict[str, Any]: Success/error message.","parameters":{"properties":{"element_id":{"title":"Element Id","type":"string"}},"required":["element_id"],"type":"object"}}
